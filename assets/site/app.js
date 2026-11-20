@@ -356,16 +356,23 @@ function buildModelRow(m) {
   tdOut.dataset.value = m.free ? "0" : String(m.output_usd_per_m ?? 999999);
   tdOut.textContent = m.free ? "Free" : fmtPricePerM(m.output_usd_per_m, false);
 
-  // Col 6: Save %
+  // Col 6: Savings (positive framing: "Free" for free models, "Save X%" in green/turquoise tint, "—" when null)
   const tdSave = document.createElement("td");
   tdSave.className = "num";
-  tdSave.dataset.value = String(m.save_pct ?? -1);
-  if (m.save_pct != null && Number(m.save_pct) > 0) {
+  if (m.free) {
+    tdSave.dataset.value = "100";
+    const sp = document.createElement("span");
+    sp.className = "save-pill save-pill--free";
+    sp.textContent = "Free";
+    tdSave.append(sp);
+  } else if (m.save_pct != null && Number(m.save_pct) > 0) {
+    tdSave.dataset.value = String(Number(m.save_pct));
     const sp = document.createElement("span");
     sp.className = "save-pill";
-    sp.textContent = `-${Math.round(Number(m.save_pct))}%`;
+    sp.textContent = `Save ${Math.round(Number(m.save_pct))}%`;
     tdSave.append(sp);
   } else {
+    tdSave.dataset.value = "-1";
     tdSave.textContent = "—";
   }
 
@@ -373,21 +380,56 @@ function buildModelRow(m) {
   return tr;
 }
 
-function updateFilterCounts(models) {
-  const counts = {
-    all: models.length,
-    text: models.filter((m) => m.modality === "text").length,
-    image: models.filter((m) => m.modality === "image").length,
-    video: models.filter((m) => m.modality === "video").length,
-    free: models.filter((m) => m.free).length
-  };
-  for (const btn of document.querySelectorAll("[data-filter]")) {
-    const key = btn.dataset.filter;
-    const badge = btn.querySelector(".filter-btn__count");
-    if (badge && key in counts) {
-      badge.textContent = String(counts[key]);
+function renderFilterChips(models) {
+  const group = document.getElementById("models-filter-group");
+  if (!group) return;
+
+  const modCounts = new Map();
+  let freeCount = 0;
+  for (const m of models) {
+    const mod = (m.modality || "text").toLowerCase();
+    modCounts.set(mod, (modCounts.get(mod) || 0) + 1);
+    if (m.free) freeCount++;
+  }
+
+  const preferredOrder = ["text", "image", "video", "audio"];
+  const sortedMods = [...modCounts.keys()].sort((a, b) => {
+    const ai = preferredOrder.indexOf(a);
+    const bi = preferredOrder.indexOf(b);
+    if (ai !== -1 || bi !== -1) return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+    return collator.compare(a, b);
+  });
+
+  const chips = [{ key: "all", label: "All", count: models.length }];
+  for (const mod of sortedMods) {
+    const count = modCounts.get(mod) || 0;
+    if (count > 0) {
+      chips.push({ key: mod, label: mod.charAt(0).toUpperCase() + mod.slice(1), count });
     }
   }
+  if (freeCount > 0) {
+    chips.push({ key: "free", label: "Free", count: freeCount });
+  }
+
+  if (!chips.some((c) => c.key === activeFilter)) {
+    activeFilter = "all";
+  }
+
+  const frag = document.createDocumentFragment();
+  for (const chip of chips) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "filter-btn";
+    btn.dataset.filter = chip.key;
+    btn.setAttribute("aria-pressed", chip.key === activeFilter ? "true" : "false");
+    btn.append(document.createTextNode(`${chip.label} `));
+    const countEl = document.createElement("span");
+    countEl.className = "filter-btn__count";
+    countEl.textContent = String(chip.count);
+    btn.append(countEl);
+    frag.append(btn);
+  }
+  group.replaceChildren(frag);
 }
 
 function applyModelFilters() {
@@ -453,7 +495,7 @@ function renderModelsTable(models = []) {
   frag.append(emptyRow);
 
   tbody.replaceChildren(frag);
-  updateFilterCounts(currentModels);
+  renderFilterChips(currentModels);
   applyModelFilters();
 }
 
@@ -527,10 +569,13 @@ function initModelControls() {
     });
   }
 
-  for (const btn of document.querySelectorAll("[data-filter]")) {
-    btn.addEventListener("click", () => {
+  const filterGroup = document.getElementById("models-filter-group");
+  if (filterGroup) {
+    filterGroup.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-filter]");
+      if (!btn || !filterGroup.contains(btn)) return;
       activeFilter = btn.dataset.filter || "all";
-      for (const other of document.querySelectorAll("[data-filter]")) {
+      for (const other of filterGroup.querySelectorAll("[data-filter]")) {
         other.setAttribute("aria-pressed", other === btn ? "true" : "false");
       }
       applyModelFilters();

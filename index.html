@@ -105,7 +105,10 @@
     <div class="wrap"><div class="hero-text">
       <div class="hero__c">
         <a class="pill" href="#trust"><span class="hero-dot" aria-hidden="true"></span><span>Phala TEE verified</span><span class="muted">Operated from Texas</span></a>
-        <h1 id="hero-h" aria-label="AI inference peer in Texas"><span class="hero-brand-mark" aria-hidden="true"><img src="assets/brand/logo-mark.svg" alt="" width="64" height="64" fetchpriority="high"></span>AI inference peer in Texas</h1>
+        <div class="hero-emblem" aria-hidden="true">
+          <img src="assets/brand/logo-mark.svg" alt="" width="112" height="112" fetchpriority="high">
+        </div>
+        <h1 id="hero-h">AI inference peer in Texas</h1>
         <p class="hero__lead">Pay per request in USDC on the AntSeed network. Verified domain, Phala TEE attestation, and 13 live models starting at $0.</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="#download">Download AntSeed Desktop<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
@@ -116,9 +119,9 @@
         <div class="ly-piece d-win d-win--dark" aria-hidden="true">
           <div class="d-win__bar">
             <span class="d-win__dots"><i></i><i></i><i></i></span>
-            <span><b>AntSeed Gateway</b> · localhost:8379/v1</span>
+            <span class="d-win__title"><b>AntSeed Gateway</b><span class="d-win__port"> · localhost:8379/v1</span></span>
             <span class="sp"></span>
-            <span>Peer 6c8044f5…fa139 · Phala TEE</span>
+            <span class="d-win__peer">Peer 6c8044f5…fa139 · Phala TEE</span>
           </div>
           <div class="d-win__body">
             <div class="peer-list">
@@ -128,9 +131,9 @@
               <div class="peer-item"><b>MiniMax M2.7</b><span class="price price--free">Free</span><code>minimax-m2.7</code></div>
             </div>
             <div class="req-pane" data-ly-steps="900">
-              <div class="req-line">POST /v1/chat/completions · model: 6c8044f5…fa139@claude-sonnet-5.5</div>
+              <div class="req-line"><span class="req-method">POST /v1/chat/completions</span><span class="req-sep" aria-hidden="true">·</span><span class="req-model">6c8044f5…fa139@claude-sonnet-5.5</span></div>
               <div class="req-trace" data-step><span>Phala TEE attestation passed</span><span>·</span><span>Base USDC channel open</span></div>
-              <div class="req-reply" data-step>Streaming response from Texas peer. Usage metered per request with zero subscription.<small>Settled · $0.0042 USDC</small></div>
+              <div class="req-reply" data-step>Streaming response from Texas peer. Metered per request with zero subscription.<small>Settled · $0.0042 USDC</small></div>
               <div class="req-badges" data-step><span>Private · TEE</span><span>OpenAI &amp; Anthropic API</span><span>Zero account</span></div>
             </div>
           </div>
@@ -162,7 +165,7 @@
         </div>
         <div class="span-3 kpi-cell">
           <p class="t-stat" data-stat="total-buyers">237</p>
-          <p class="kpi-cell__label">Buyer counts summed</p>
+          <p class="kpi-cell__label">Buyers (both sellers; may overlap)</p>
         </div>
       </div>
 
@@ -237,11 +240,9 @@
           <label for="model-search">Search models or request IDs</label>
           <input id="model-search" type="search" autocomplete="off" placeholder="claude-sonnet-5.5, gpt-6, minimax...">
         </div>
-        <div class="filter-group" role="group" aria-label="Filter models by modality">
+        <div class="filter-group" id="models-filter-group" role="group" aria-label="Filter models by modality">
           <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All <span class="filter-btn__count">13</span></button>
           <button type="button" class="filter-btn" data-filter="text" aria-pressed="false">Text <span class="filter-btn__count">13</span></button>
-          <button type="button" class="filter-btn" data-filter="image" aria-pressed="false">Image <span class="filter-btn__count">0</span></button>
-          <button type="button" class="filter-btn" data-filter="video" aria-pressed="false">Video <span class="filter-btn__count">0</span></button>
           <button type="button" class="filter-btn" data-filter="free" aria-pressed="false">Free <span class="filter-btn__count">1</span></button>
         </div>
       </div>
@@ -278,7 +279,7 @@
               <td class="num" data-value="0">Free</td>
               <td class="num" data-value="0">Free</td>
               <td class="num" data-value="0">Free</td>
-              <td class="num" data-value="100"><span class="save-pill">-100%</span></td>
+              <td class="num" data-value="100"><span class="save-pill save-pill--free">Free</span></td>
             </tr>
             <tr data-modality="text" data-free="0" data-search="gemini 3 flash preview gemini-3-flash-preview text">
               <th scope="row" data-value="Gemini 3 Flash Preview"><div class="model-cell"><span class="model-name">Gemini 3 Flash Preview</span><span class="model-id-row"><code class="model-id-code">gemini-3-flash-preview</code></span></div></th>
@@ -286,7 +287,7 @@
               <td class="num" data-value="0.295">$0.295</td>
               <td class="num" data-value="0.0295">$0.0295</td>
               <td class="num" data-value="1.77">$1.77</td>
-              <td class="num" data-value="41"><span class="save-pill">-41%</span></td>
+              <td class="num" data-value="41"><span class="save-pill">Save 41%</span></td>
             </tr>
             <tr data-modality="text" data-free="0" data-search="gpt-6.1 sol gpt-6.1-sol text">
               <th scope="row" data-value="GPT-6.1 Sol"><div class="model-cell"><span class="model-name">GPT-6.1 Sol</span><span class="model-id-row"><code class="model-id-code">gpt-6.1-sol</code></span></div></th>
@@ -294,7 +295,7 @@
               <td class="num" data-value="1.18">$1.18</td>
               <td class="num" data-value="0.059">$0.059</td>
               <td class="num" data-value="5.9">$5.90</td>
-              <td class="num" data-value="41"><span class="save-pill">-41%</span></td>
+              <td class="num" data-value="41"><span class="save-pill">Save 41%</span></td>
             </tr>
             <tr data-modality="text" data-free="0" data-search="claude sonnet 5.5 claude-sonnet-5.5 text">
               <th scope="row" data-value="Claude Sonnet 5.5"><div class="model-cell"><span class="model-name">Claude Sonnet 5.5</span><span class="model-id-row"><code class="model-id-code">claude-sonnet-5.5</code></span></div></th>
@@ -302,7 +303,7 @@
               <td class="num" data-value="1.9">$1.90</td>
               <td class="num" data-value="0.095">$0.095</td>
               <td class="num" data-value="9.5">$9.50</td>
-              <td class="num" data-value="5"><span class="save-pill">-5%</span></td>
+              <td class="num" data-value="5"><span class="save-pill">Save 5%</span></td>
             </tr>
           </tbody>
         </table>
