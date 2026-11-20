@@ -5,6 +5,8 @@
   --tx-turquoise-soft: color-mix(in oklab, #2a7f7e 14%, #f5f0e6);
   --tx-code-bg: #1f1916;
   --tx-code-ink: #f5f0e6;
+  /* Base64-encoded equivalent of backgrounds.css noise tile avoids stray /%23n URL parsing */
+  --g-noise-soft: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iMjQwIj48ZmlsdGVyIGlkPSJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9InNSR0IiPjxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIxLjIiIG51bU9jdGF2ZXM9IjIiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48ZmVDb2xvck1hdHJpeCB2YWx1ZXM9IjEgMCAwIDAgMCAxIDAgMCAwIDAgMSAwIDAgMCAwIDAgMCAwIDAgMSIvPjxmZUNvbXBvbmVudFRyYW5zZmVyPjxmZUZ1bmNSIHR5cGU9ImxpbmVhciIgc2xvcGU9IjAuNiIgaW50ZXJjZXB0PSIuMiIvPjxmZUZ1bmNHIHR5cGU9ImxpbmVhciIgc2xvcGU9IjAuNiIgaW50ZXJjZXB0PSIuMiIvPjxmZUZ1bmNCIHR5cGU9ImxpbmVhciIgc2xvcGU9IjAuNiIgaW50ZXJjZXB0PSIuMiIvPjwvZmVDb21wb25lbnRUcmFuc2Zlcj48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWx0ZXI9InVybCgjbikiLz48L3N2Zz4=");
 }
 
 /* Balanced headings and clean paragraph wrapping (MWG: improve-text-layout-and-legibility) */
@@ -108,12 +110,9 @@ main > section.hero.hero--centred {
   margin-top: 4px;
 }
 .hero--centred .hero__window {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px 24px;
+  position: relative;
   margin-top: 20px;
-  min-height: 0;
+  min-height: 292px;
   -webkit-mask-image: none;
   mask-image: none;
   background:
@@ -122,12 +121,12 @@ main > section.hero.hero--centred {
     linear-gradient(180deg, #dfd2bc 0%, #cdb99c 62%, #b99e7e 100%);
 }
 .hero--centred .hero__window > .ly-piece {
-  position: relative;
-  left: auto;
-  top: auto;
-  transform: none;
-  width: min(880px, 100%);
-  margin: 0 auto;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(880px, calc(100% - 48px));
 }
 .d-win--dark {
   background: #1c1714;
@@ -331,7 +330,7 @@ main > section.hero.hero--centred {
   }
   .hero--centred .hero__window {
     margin-top: 14px;
-    padding: 14px 20px;
+    min-height: 256px;
   }
   .d-win--dark .d-win__bar {
     height: 32px;
@@ -363,19 +362,22 @@ main > section.hero.hero--centred {
   }
 }
 @media (max-width: 639px) {
+  .hero--centred .pill {
+    width: 100%;
+    justify-content: center;
+  }
   .hero--centred .hero__window {
     margin-top: 16px;
-    padding: 12px;
-    min-height: 0;
+    min-height: 252px;
     -webkit-mask-image: none;
     mask-image: none;
   }
   .hero--centred .hero__window > .ly-piece {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: 100%;
-    transform: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: calc(100% - 24px);
+    transform: translate(-50%, -50%);
   }
   .d-win--dark .d-win__bar {
     height: auto;
@@ -987,24 +989,28 @@ main > section.hero.hero--centred {
   font-size: 15px;
 }
 @media (max-width: 639px) {
+  #download .section-head {
+    margin-bottom: var(--s-4);
+  }
   .os-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0 12px;
-    margin-top: var(--s-3);
+    margin-top: var(--s-2);
   }
   .os-link {
     font-size: 13.5px;
-    padding: 8px 0;
+    padding: 7px 0;
   }
   .os-link__arch {
     display: none;
   }
   #download .os-detected-note {
-    margin-bottom: var(--s-3);
-    font-size: 15px;
+    margin-bottom: var(--s-2);
+    font-size: 14.5px;
+    line-height: 1.42;
   }
   #download .os-extra-links {
-    margin-top: var(--s-3);
+    margin-top: var(--s-2);
   }
 }
 
@@ -1030,8 +1036,8 @@ main > section.hero.hero--centred {
 }
 @media (max-width: 639px) {
   #download .panel.download-visual {
-    --p-h: 204px;
-    padding: 10px;
+    --p-h: 174px;
+    padding: 8px;
   }
 }
 
@@ -1078,6 +1084,10 @@ main > section.hero.hero--centred {
   display: none;
 }
 @media (max-width: 639px) {
+  #connect .section-head--split > a.link {
+    width: 100%;
+    justify-content: space-between;
+  }
   #connect .panel.connect-panel {
     --p-h: 196px;
   }
@@ -1506,7 +1516,7 @@ main > section.section:is(.bg-band, .bg-mist) {
   .models-table th, .models-table td { padding: 4px 10px; }
   .models-table thead th > button { min-block-size: 34px; padding: 5px 10px; }
   .models-foot { margin-top: var(--s-2); }
-  #download .panel.download-visual { --p-h: 372px; height: var(--p-h); padding: 14px; }
+  #download .panel.download-visual { --p-h: 486px; height: var(--p-h); padding: 14px; }
   #download .os-grid { margin-top: var(--s-4); }
   #download .os-link { min-block-size: 40px; padding: 7px 0; }
   #connect .section-head--split { margin-bottom: var(--s-3); }
