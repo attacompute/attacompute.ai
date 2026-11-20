@@ -1710,6 +1710,23 @@ main > section.section:is(.bg-band, .bg-mist) {
 }
 
 /* Footer legal clean flex alignment + 320px/390px narrow-screen safety */
+.footer__contact-note {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.48;
+  color: var(--ink);
+  max-width: 38ch;
+}
+.footer__contact-note a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--ink) 50%, transparent);
+  text-underline-offset: 3px;
+}
+.subpage-footer {
+  border-top: 1px solid var(--line);
+  padding: 36px 0 calc(36px + var(--bar, 0px));
+}
 .footer__legal-links {
   display: flex;
   flex-wrap: wrap;
@@ -1730,7 +1747,7 @@ main > section.section:is(.bg-band, .bg-mist) {
     gap: 8px;
     width: 100%;
   }
-  .footer__legal-links > span:first-child {
+  .footer__legal-links > span {
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
