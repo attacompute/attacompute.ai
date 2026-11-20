@@ -14,7 +14,7 @@ Public website for **attacompute** — an independent AI inference provider (sel
   - `/` (`index.html`) — Hero, live stitched stats & daily USDC chart, searchable/sortable models & pricing table, OS-aware AntSeed Desktop download, Desktop/CLI connect guide, trust & Phala TEE verification, FAQ, and footer.
   - `/connect/` (`connect/index.html`) — Complete Desktop, direct Buyer CLI (`:8377`), Gateway CLI (`:8379`), and OpenAI SDK connection guide with copy-to-clipboard commands.
   - `/privacy.html` & `/terms.html` — Plain data handling and terms of use.
-- `_headers` — Strict Content Security Policy (`connect-src 'self' https://antseedstats.com`), HSTS, clickjacking protection, and cache rules for Cloudflare Pages.
+- `_headers` — Strict Content Security Policy (`connect-src 'self' https://antseedstats.com https://cloudflareinsights.com`, plus Cloudflare Web Analytics `script-src`), HSTS (`max-age=15552000`), clickjacking protection, and cache rules for Cloudflare Pages.
 
 ## Local preview
 
