@@ -516,7 +516,7 @@ const icoBuf = buildIco(faviconEntries);
 fs.writeFileSync(path.join(ROOT, "favicon.ico"), icoBuf);
 console.log(`Wrote favicon.ico (16/32/48, ${(icoBuf.length / 1024).toFixed(1)} KB)`);
 
-// 3. Opaque app icons (apple-touch-icon 180x180, icon-512 512x512 on #f5f0e6)
+// 3. Opaque app icons (apple-touch-icon 180x180, icon-512 512x512 on #f5f0e6) + legacy social-preview assets/profile.png (512x512)
 for (const [name, size] of [
   ["apple-touch-icon.png", 180],
   ["icon-512.png", 512]
@@ -526,6 +526,15 @@ for (const [name, size] of [
   const outPath = path.join(OUT_DIR, name);
   fs.writeFileSync(outPath, png);
   console.log(`Wrote ${path.relative(ROOT, outPath)} (${size}x${size}, ${(png.length / 1024).toFixed(1)} KB)`);
+}
+
+{
+  const origFill = Math.max(keyed.bbox.bw, keyed.bbox.bh) / Math.max(decoded.width, decoded.height);
+  const profileRgba = renderSquare(keyed, 512, { fillRatio: origFill, bgHex: "#f5f0e6" });
+  const profilePng = encodeIndexedIfPossible(512, 512, profileRgba, true);
+  const profilePath = path.join(ROOT, "assets/profile.png");
+  fs.writeFileSync(profilePath, profilePng);
+  console.log(`Wrote ${path.relative(ROOT, profilePath)} (512x512, ${(profilePng.length / 1024).toFixed(1)} KB)`);
 }
 
 /* ------------------------------------------- render OG image (1200x630) via self-contained file:// HTML */
