@@ -1,0 +1,7 @@
+# Cloudflare Pages redirects for legacy attacompute.ai routes
+/about /#trust 301
+/about/ /#trust 301
+/contact /#contact 301
+/contact/ /#contact 301
+/models /#models 301
+/models/ /#models 301
