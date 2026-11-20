@@ -5,12 +5,12 @@ Branch: `redesign/texan-site`
 
 ## 1. Design Concept & Brand Identity
 
-**attacompute** is an independent AI inference provider on the AntSeed peer-to-peer network, operated from Texas (`"Compute, cultivated."`). The redesign keeps a clean, editorial, developer-trustworthy surface with warm Texan character rather than neon crypto clichés or kitschy western tropes:
+**attacompute** is an independent AI inference provider on the AntSeed peer-to-peer network, operated from Texas (`"Compute, cultivated."`). The redesign keeps a clean, editorial, developer-trustworthy surface anchored in attacompute's rust-and-cream palette:
 
 - **Palette (`start.mjs brand`, `<html data-ground="sand">`)**:
   - Background sand `#f5f0e6`, surface `#ebe3d5`, espresso ink `#1f1916`, warm muted `#68625d`
   - Primary terracotta rust `#a84832` (drawn directly from the original ant head mark)
-  - Secondary Texan turquoise `#2a7f7e` for verified TEE badges, free-model accents, and the active TEE seller series in the settlement chart
+  - Secondary teal `#2a7f7e` for verified TEE badges, free-model accents, and the active TEE seller series in the settlement chart
 - **Self-hosted typography (`funnel` pair + monospace)**:
   - `Funnel Display`, `Funnel Sans`, and `DM Mono` served as 4 subset `.woff2` files in `assets/fonts/` (52 KiB total, zero third-party font CDNs), preloaded with `crossorigin` in `<head>`.
 - **Brand Mark (Original Ant)**:

@@ -3,8 +3,6 @@
 :root {
   --tx-turquoise: #2a7f7e;
   --tx-turquoise-soft: color-mix(in oklab, #2a7f7e 14%, #f5f0e6);
-  --tx-leather: #432a1f;
-  --tx-sunset: #c8643c;
   --tx-code-bg: #1f1916;
   --tx-code-ink: #f5f0e6;
 }
@@ -1234,7 +1232,7 @@ main p {
   width: fit-content;
 }
 
-/* FAQ 6/6 split (text left, Texan verification panel right — matches #download 6/6 split) */
+/* FAQ 6/6 split (text left, verification summary panel right — matches #download 6/6 split) */
 .faq-split {
   margin-top: var(--s-4);
 }
