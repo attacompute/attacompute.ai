@@ -30,7 +30,9 @@ main p {
 
 /* Brand mark in nav, hero, and footer */
 .nav__logo picture {
-  display: contents;
+  display: block;
+  flex: none;
+  line-height: 0;
 }
 .nav__logo .nav__logo-img {
   width: 32px;
@@ -267,13 +269,19 @@ main p {
 @media (max-width: 1023px) {
   .d-win--dark .d-win__body {
     grid-template-columns: 1fr;
-    min-height: 220px;
+    min-height: 228px;
   }
   .peer-list {
     display: none;
   }
   .hero__window .d-win__bar .sp ~ span {
     display: none;
+  }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .req-pane {
+    padding: 16px 20px;
+    gap: 10px;
   }
 }
 @media (max-height: 820px) and (min-width: 1024px) {
@@ -825,7 +833,14 @@ main p {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0 24px;
   margin-top: var(--s-5);
-  border-top: 1px solid var(--line);
+}
+.os-grid--subpage {
+  margin-top: 0;
+}
+@media (min-width: 1024px) {
+  .os-grid--subpage {
+    grid-template-columns: 1fr;
+  }
 }
 .os-link {
   display: flex;
@@ -1376,42 +1391,216 @@ main > section.section:is(.bg-band, .bg-mist) {
 
 /* Compact laptop (1024x768) & Tablet (640-1023) rhythm adjustments */
 @media (max-height: 820px) and (min-width: 1024px) {
-  .chart-svg-wrap { height: 140px; }
-  .stats-kpis { margin-top: var(--s-3); margin-bottom: var(--s-3); }
+  :root {
+    --padt: 92px;
+    --padb: 36px;
+    --head-gap: 20px;
+  }
+  #stats .chart-svg-wrap { height: 118px; }
+  .stats-kpis { margin-top: var(--s-2); margin-bottom: var(--s-3); }
   .sellers-pair { margin-top: var(--s-3); }
-  .seller-row { padding: 10px 14px; }
-  .models-controls { margin-top: var(--s-3); margin-bottom: var(--s-2); }
-  .models-table th, .models-table td { padding: 5px 10px; }
-  #download .panel { --p-h: 390px; }
+  .seller-row { padding: 9px 14px; gap: 4px; }
+  .stats-foot { margin-top: var(--s-2); }
+  .price-spectrum { margin-top: var(--s-2); padding: 6px 12px; }
+  .price-spectrum svg { height: 34px; }
+  .models-controls { margin-top: var(--s-2); margin-bottom: var(--s-2); }
+  .models-table th, .models-table td { padding: 4px 10px; }
+  .models-table thead th > button { min-block-size: 34px; padding: 5px 10px; }
+  .models-foot { margin-top: var(--s-2); }
+  #download .panel.download-visual { --p-h: 372px; height: var(--p-h); padding: 14px; }
+  #download .os-grid { margin-top: var(--s-4); }
+  #download .os-link { min-block-size: 40px; padding: 7px 0; }
+  #connect .section-head--split { margin-bottom: var(--s-3); }
+  #connect .card { padding: 14px 18px; }
+  #connect .connect-steps { margin-top: var(--s-2); gap: 6px; }
+  #connect .connect-steps li { font-size: 14px; line-height: 1.38; }
+  #connect .card-foot-link { margin-top: var(--s-2); }
+  #connect .panel.connect-panel { --p-h: 160px; height: var(--p-h); padding: 10px; }
+  #connect .panel.connect-panel--cli { min-height: 160px; padding: 8px; }
+  #connect .code-stack { padding: 6px 8px; gap: 4px; }
+  #connect .code-block { padding: 5px 8px; }
+  #connect .code-block pre { font-size: 11.5px; line-height: 1.4; }
+  .trust-statement { font-size: clamp(36px, 4.2vw, 56px); }
+  .trust-cards { margin-top: var(--s-4); }
+  .trust-card { padding: 18px; gap: 8px; }
+  .faq-split { margin-top: var(--s-2); }
+  .faq-list { gap: 8px; }
+  .faq-item { padding-top: 8px; }
+  .faq-item h3 { font-size: 15.5px; margin-bottom: 2px; }
+  .faq-item p { font-size: 14px; line-height: 1.38; }
+  #faq .faq-visual { --p-h: 416px; height: var(--p-h); padding: 18px; gap: 12px; }
+  .faq-visual__mark { width: 120px; height: 120px; }
 }
 @media (min-width: 640px) and (max-width: 1023px) {
+  /* Hero: keep balanced window proportions on tall portrait tablets (768x1024, 834x1194) */
+  .hero--centred .hero__window > .ly-piece {
+    top: clamp(24px, 5svh, 52px);
+  }
+  /* Stats: native 12-col spans, clear breathing room above chart, exact 1-screen fit at 768x1024 */
+  #stats .section-head {
+    margin-bottom: var(--s-4);
+  }
   .stats-kpis {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: var(--s-2);
+    margin-bottom: var(--s-5);
   }
   .stats-kpis > .span-3 {
-    grid-column: auto;
+    grid-column: auto / span 3;
+  }
+  .chart-svg-wrap {
+    height: clamp(164px, 18.5svh, 236px);
   }
   .sellers-pair {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: var(--s-4);
   }
   .sellers-pair > .span-6 {
-    grid-column: auto;
+    grid-column: auto / span 6;
   }
+  .seller-row {
+    padding: 12px 16px;
+  }
+  .stats-foot {
+    margin-top: var(--s-3);
+  }
+  /* Models: fit 1 screen at 768x1024 and keep search input off the >50% edge rule */
+  #models .section-head {
+    margin-bottom: var(--s-4);
+  }
+  .models-controls {
+    margin-top: var(--s-2);
+    margin-bottom: var(--s-2);
+    gap: 8px 12px;
+  }
+  .models-search {
+    min-width: 180px;
+    max-width: 280px;
+  }
+  .models-table th,
+  .models-table td {
+    padding: 5px 8px;
+  }
+  .models-table thead th > button {
+    min-block-size: 36px;
+    padding: 6px 8px;
+    font-size: 12.5px;
+  }
+  .model-cell {
+    gap: 2px 6px;
+  }
+  .model-name {
+    font-size: 13.5px;
+  }
+  .model-id-code {
+    font-size: 11px;
+  }
+  .models-foot {
+    margin-top: var(--s-2);
+  }
+  /* Download: let diagram fill remaining screen height instead of leaving an empty band */
+  #download .section-head {
+    margin-bottom: var(--s-4);
+  }
+  #download > .wrap > .grid.grid--top {
+    flex: 1 1 auto;
+    grid-template-rows: auto minmax(320px, 1fr);
+    row-gap: var(--s-5);
+  }
+  #download > .wrap > .grid.grid--top > .span-6.start-7 {
+    display: flex;
+    flex-direction: column;
+  }
+  #download .panel.download-visual {
+    --p-h: auto;
+    height: auto;
+    flex: 1 1 auto;
+    min-height: 320px;
+    padding: 20px;
+  }
+  /* Connect: balanced 2-column cards with bottom-aligned panels and crisp pills */
+  #connect > .wrap > .grid {
+    flex: 1 1 auto;
+    align-items: stretch;
+  }
+  #connect .card {
+    padding: 18px 20px;
+  }
+  #connect .card-foot-link {
+    margin-bottom: var(--s-3);
+  }
+  #connect .panel.connect-panel {
+    margin-top: auto;
+    --p-h: clamp(220px, 24svh, 300px);
+    height: var(--p-h);
+  }
+  #connect .panel.connect-panel--cli {
+    margin-top: auto;
+    min-height: clamp(220px, 24svh, 300px);
+  }
+  .connect-panel__row {
+    font-size: 11.5px;
+    gap: 6px;
+  }
+  .connect-panel__tag {
+    white-space: nowrap;
+    font-size: 11px;
+  }
+  .code-block pre {
+    font-size: 11.5px;
+  }
+  /* Trust: 3-column 12-col grid (span 4 each) avoids overflow at 768, hole at 834, and sparse screen */
   .trust-cards {
-    grid-template-columns: 1fr;
-    gap: 14px;
     margin-top: var(--s-5);
   }
   .trust-cards > .span-4 {
-    grid-column: 1 / -1;
-    padding: 18px 22px;
-    gap: 6px;
+    grid-column: auto / span 4;
+    padding: 20px 18px;
+    gap: 10px;
+    min-height: clamp(320px, 38svh, 460px);
   }
-  .faq-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .trust-card p {
+    font-size: 15.5px;
+    line-height: 1.48;
   }
-  .faq-grid > .span-6 {
-    grid-column: auto;
+  /* FAQ: true 6/6 split on the native 12-col grid */
+  #faq .section-head {
+    margin-bottom: var(--s-4);
+  }
+  .faq-split {
+    margin-top: 0;
+    align-items: stretch;
+    flex: 1 1 auto;
+  }
+  .faq-split > .span-6 {
+    grid-column: auto / span 6;
+  }
+  .faq-split > .span-6.start-7 {
+    display: flex;
+    flex-direction: column;
+  }
+  .faq-list {
+    gap: 14px;
+  }
+  .faq-item {
+    padding-top: 12px;
+  }
+  .faq-item h3 {
+    font-size: 16px;
+  }
+  .faq-item p {
+    font-size: 14.5px;
+    line-height: 1.44;
+  }
+  #faq .faq-visual {
+    --p-h: auto;
+    height: auto;
+    flex: 1 1 auto;
+    min-height: 360px;
+    padding: 20px;
+    gap: 16px;
+  }
+  .faq-visual__mark {
+    width: 128px;
+    height: 128px;
   }
 }
 
@@ -1420,7 +1609,7 @@ main > section.section:is(.bg-band, .bg-mist) {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6px 14px;
+  gap: 6px 24px;
 }
 @media (max-width: 639px) {
   .faq-list {
@@ -1430,13 +1619,17 @@ main > section.section:is(.bg-band, .bg-mist) {
     padding-top: 14px;
   }
   .footer__legal-links {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
     width: 100%;
   }
-  .footer__legal-links > span:last-child {
-    grid-column: 1 / -1;
+  .footer__legal-links > span:first-child {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 10px;
   }
   .btn--xl,
   .btn--wide {
