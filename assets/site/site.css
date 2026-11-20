@@ -1710,12 +1710,23 @@ main > section.section:is(.bg-band, .bg-mist) {
 }
 
 /* Footer legal clean flex alignment + 320px/390px narrow-screen safety */
+.closing__cta > .btn--xl {
+  flex: none;
+}
+.closing__links .footer__lede {
+  font-size: 15.5px;
+  line-height: 1.42;
+  max-width: 38ch;
+}
+.closing__links .stack-4 > * + * {
+  margin-top: 10px;
+}
 .footer__contact-note {
   margin: 0;
-  font-size: 14px;
-  line-height: 1.48;
+  font-size: 13.5px;
+  line-height: 1.42;
   color: var(--ink);
-  max-width: 38ch;
+  max-width: 42ch;
 }
 .footer__contact-note a {
   color: var(--ink);

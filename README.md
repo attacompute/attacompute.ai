@@ -7,14 +7,16 @@ Public website for **attacompute** — an independent AI inference provider (sel
 ## What is in this repo
 
 - Static HTML, CSS, and vanilla ES modules deployable directly to **Cloudflare Pages** with zero build server required.
-- Raster logo suite derived from the original rust ant head mark (`assets/brand/logo-mark-{64,128,256,512}.{png,webp}`, `favicon.ico`, PNG favicons at 16/32/48, `apple-touch-icon.png` at 180, `icon-512.png`, and 1200×630 `og-image.png`).
+- Raster logo suite derived from the original rust ant head mark (`assets/brand/logo-mark-{64,128,256,512}.{png,webp}`, `favicon.ico`, PNG favicons at 16/32/48, `apple-touch-icon.png` at 180, `icon-512.png`, `assets/profile.png` at 512×512 for legacy social previews, and 1200×630 `og-image.png`).
 - Self-hosted fonts (`Funnel Display`, `Funnel Sans`, `DM Mono`) in `assets/fonts/` — no third-party font CDNs.
 - Live on-chain telemetry and advertised model pricing from the public [AntSeedStats API](https://antseedstats.com/developers) (CC BY 4.0), with `localStorage` caching, 5-minute background refresh, and a build-time fallback snapshot (`data/snapshot.json`).
-- Dedicated pages:
-  - `/` (`index.html`) — Hero, live stitched stats & daily USDC chart, searchable/sortable models & pricing table, OS-aware AntSeed Desktop download, Desktop/CLI connect guide, trust & Phala TEE verification, FAQ, and footer.
+- Dedicated pages & routing:
+  - `/` (`index.html`) — Hero, live stitched stats & daily USDC chart, searchable/sortable models & pricing table, OS-aware AntSeed Desktop download, Desktop/CLI connect guide, trust & Phala TEE verification, FAQ, and contact/footer (`#contact`).
   - `/connect/` (`connect/index.html`) — Complete Desktop, direct Buyer CLI (`:8377`), Gateway CLI (`:8379`), and OpenAI SDK connection guide with copy-to-clipboard commands.
-  - `/privacy/` & `/terms/` (`privacy/index.html`, `terms/index.html`) — Plain data handling and terms of use.
-- `_headers` — Strict Content Security Policy (`connect-src 'self' https://antseedstats.com https://cloudflareinsights.com`, plus Cloudflare Web Analytics `script-src`), HSTS (`max-age=15552000`), clickjacking protection, and cache rules for Cloudflare Pages.
+  - `/privacy/` & `/terms/` (`privacy/index.html`, `terms/index.html`) — Plain data handling (including Cloudflare Web Analytics and `localStorage` caching) and terms of use.
+  - `/404.html` — On-brand 404 fallback page for Cloudflare Pages.
+  - `_redirects`, `robots.txt`, & `sitemap.xml` — 301 redirects for legacy `/about`, `/contact`, and `/models` URLs, search crawler rules, and XML sitemap.
+- `_headers` — Apex-scoped HSTS (`max-age=15552000` on `attacompute.ai` and `d5v1n2.com`), `X-Robots-Tag: noindex` on `*.pages.dev` preview hosts, strict Content Security Policy (`connect-src 'self' https://antseedstats.com https://cloudflareinsights.com`, plus Cloudflare Web Analytics `script-src`), clickjacking protection, and cache rules for Cloudflare Pages.
 
 ## Local preview
 
