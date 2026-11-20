@@ -1,0 +1,2085 @@
+{
+  "generated_at": "2026-11-20T14:50:15.284Z",
+  "attribution": "Data: AntSeedStats (antseedstats.com), CC BY 4.0",
+  "sellers": {
+    "current": {
+      "address": "0x6c8044f5e6fb2ad70dd31fd7a20fae05a73fa139",
+      "name": null,
+      "rank": 87,
+      "revenue_micro": 22846291,
+      "revenue_usd": "22.85",
+      "revenue_7d_micro": 22846291,
+      "revenue_7d_usd": "22.85",
+      "fees_micro": 913819,
+      "fees_usd": "0.91",
+      "settles": 75,
+      "channels": 11,
+      "buyers": 6,
+      "tokens": 0,
+      "requests": 0,
+      "reputation": null,
+      "verified": true,
+      "verification": [
+        {
+          "kind": "domain",
+          "target": "d5v1n2.com",
+          "verified": true,
+          "href": "https://d5v1n2.com"
+        },
+        {
+          "kind": "github",
+          "target": "d5v1n2",
+          "verified": true,
+          "href": "https://github.com/d5v1n2"
+        }
+      ],
+      "tee_advertised": true,
+      "organic": true,
+      "first_settle_ts": 1795012227,
+      "last_settle_ts": 1795185080
+    },
+    "original": {
+      "address": "0xd5e7d5950b6cc71c095da4ace0c0cb8495667be0",
+      "name": "attacompute.ai",
+      "rank": 30,
+      "revenue_micro": 660850302,
+      "revenue_usd": "660.85",
+      "revenue_7d_micro": 6791720,
+      "revenue_7d_usd": "6.79",
+      "fees_micro": 26427812,
+      "fees_usd": "26.43",
+      "settles": 3999,
+      "channels": 1224,
+      "buyers": 231,
+      "tokens": 1705068717,
+      "requests": 57781,
+      "reputation": 39.87793099621599,
+      "verified": true,
+      "verification": [
+        {
+          "kind": "domain",
+          "target": "d5v1n2.com",
+          "verified": true,
+          "href": "https://d5v1n2.com"
+        },
+        {
+          "kind": "github",
+          "target": "d5v1n2",
+          "verified": true,
+          "href": "https://github.com/d5v1n2"
+        }
+      ],
+      "tee_advertised": false,
+      "organic": true,
+      "first_settle_ts": 1778297307,
+      "last_settle_ts": 1795003077
+    }
+  },
+  "daily": {
+    "current": [
+      {
+        "day": "2026-11-18",
+        "settled_micro": 2757185,
+        "settled_usd": "2.76",
+        "settles": 23,
+        "buyers": 3,
+        "tokens_in": null,
+        "tokens_out": null
+      },
+      {
+        "day": "2026-11-19",
+        "settled_micro": 17667940,
+        "settled_usd": "17.67",
+        "settles": 38,
+        "buyers": 3,
+        "tokens_in": null,
+        "tokens_out": null
+      },
+      {
+        "day": "2026-11-20",
+        "settled_micro": 2421166,
+        "settled_usd": "2.42",
+        "settles": 14,
+        "buyers": 6,
+        "tokens_in": null,
+        "tokens_out": null
+      }
+    ],
+    "original": [
+      {
+        "day": "2026-05-09",
+        "settled_micro": 147378,
+        "settled_usd": "0.15",
+        "settles": 3,
+        "buyers": 1,
+        "tokens_in": 655198,
+        "tokens_out": 7462
+      },
+      {
+        "day": "2026-05-10",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-05-11",
+        "settled_micro": 275922,
+        "settled_usd": "0.28",
+        "settles": 4,
+        "buyers": 1,
+        "tokens_in": 1276103,
+        "tokens_out": 18483
+      },
+      {
+        "day": "2026-05-12",
+        "settled_micro": 678569,
+        "settled_usd": "0.68",
+        "settles": 6,
+        "buyers": 1,
+        "tokens_in": 5125587,
+        "tokens_out": 28224
+      },
+      {
+        "day": "2026-05-13",
+        "settled_micro": 100029,
+        "settled_usd": "0.10",
+        "settles": 5,
+        "buyers": 1,
+        "tokens_in": 4763385,
+        "tokens_out": 20042
+      },
+      {
+        "day": "2026-05-14",
+        "settled_micro": 503182,
+        "settled_usd": "0.50",
+        "settles": 8,
+        "buyers": 2,
+        "tokens_in": 628693,
+        "tokens_out": 13250
+      },
+      {
+        "day": "2026-05-15",
+        "settled_micro": 288318,
+        "settled_usd": "0.29",
+        "settles": 5,
+        "buyers": 1,
+        "tokens_in": 5240028,
+        "tokens_out": 60729
+      },
+      {
+        "day": "2026-05-16",
+        "settled_micro": 152070,
+        "settled_usd": "0.15",
+        "settles": 8,
+        "buyers": 3,
+        "tokens_in": 1615713,
+        "tokens_out": 30171
+      },
+      {
+        "day": "2026-05-17",
+        "settled_micro": 277567,
+        "settled_usd": "0.28",
+        "settles": 11,
+        "buyers": 4,
+        "tokens_in": 6786366,
+        "tokens_out": 1087446
+      },
+      {
+        "day": "2026-05-18",
+        "settled_micro": 139990,
+        "settled_usd": "0.14",
+        "settles": 5,
+        "buyers": 3,
+        "tokens_in": 885586,
+        "tokens_out": 25268
+      },
+      {
+        "day": "2026-05-19",
+        "settled_micro": 370291,
+        "settled_usd": "0.37",
+        "settles": 7,
+        "buyers": 4,
+        "tokens_in": 201903,
+        "tokens_out": 401663
+      },
+      {
+        "day": "2026-05-20",
+        "settled_micro": 76380,
+        "settled_usd": "0.08",
+        "settles": 5,
+        "buyers": 3,
+        "tokens_in": 665022,
+        "tokens_out": 25296
+      },
+      {
+        "day": "2026-05-21",
+        "settled_micro": 53720,
+        "settled_usd": "0.05",
+        "settles": 4,
+        "buyers": 4,
+        "tokens_in": 220761,
+        "tokens_out": 14034
+      },
+      {
+        "day": "2026-05-22",
+        "settled_micro": 13223,
+        "settled_usd": "0.01",
+        "settles": 8,
+        "buyers": 6,
+        "tokens_in": 191718,
+        "tokens_out": 8038
+      },
+      {
+        "day": "2026-05-23",
+        "settled_micro": 230378,
+        "settled_usd": "0.23",
+        "settles": 12,
+        "buyers": 2,
+        "tokens_in": 2143256,
+        "tokens_out": 126766
+      },
+      {
+        "day": "2026-05-24",
+        "settled_micro": 25562,
+        "settled_usd": "0.03",
+        "settles": 13,
+        "buyers": 4,
+        "tokens_in": 1458174,
+        "tokens_out": 145980
+      },
+      {
+        "day": "2026-05-25",
+        "settled_micro": 202463,
+        "settled_usd": "0.20",
+        "settles": 6,
+        "buyers": 2,
+        "tokens_in": 46975,
+        "tokens_out": 33690
+      },
+      {
+        "day": "2026-05-26",
+        "settled_micro": 241,
+        "settled_usd": "0.00",
+        "settles": 1,
+        "buyers": 1,
+        "tokens_in": 6498,
+        "tokens_out": 7390
+      },
+      {
+        "day": "2026-05-27",
+        "settled_micro": 112103,
+        "settled_usd": "0.11",
+        "settles": 17,
+        "buyers": 2,
+        "tokens_in": 85684,
+        "tokens_out": 19732
+      },
+      {
+        "day": "2026-05-28",
+        "settled_micro": 69408,
+        "settled_usd": "0.07",
+        "settles": 28,
+        "buyers": 6,
+        "tokens_in": 4025688,
+        "tokens_out": 144357
+      },
+      {
+        "day": "2026-05-29",
+        "settled_micro": 16435,
+        "settled_usd": "0.02",
+        "settles": 9,
+        "buyers": 3,
+        "tokens_in": 38397,
+        "tokens_out": 28836
+      },
+      {
+        "day": "2026-05-30",
+        "settled_micro": 10330,
+        "settled_usd": "0.01",
+        "settles": 4,
+        "buyers": 3,
+        "tokens_in": 20165,
+        "tokens_out": 23233
+      },
+      {
+        "day": "2026-05-31",
+        "settled_micro": 11245,
+        "settled_usd": "0.01",
+        "settles": 2,
+        "buyers": 1,
+        "tokens_in": 38338,
+        "tokens_out": 52812
+      },
+      {
+        "day": "2026-06-01",
+        "settled_micro": 91388,
+        "settled_usd": "0.09",
+        "settles": 10,
+        "buyers": 2,
+        "tokens_in": 203237,
+        "tokens_out": 148983
+      },
+      {
+        "day": "2026-06-02",
+        "settled_micro": 88423,
+        "settled_usd": "0.09",
+        "settles": 10,
+        "buyers": 2,
+        "tokens_in": 74330,
+        "tokens_out": 43358
+      },
+      {
+        "day": "2026-06-03",
+        "settled_micro": 117039,
+        "settled_usd": "0.12",
+        "settles": 13,
+        "buyers": 2,
+        "tokens_in": 460138,
+        "tokens_out": 112061
+      },
+      {
+        "day": "2026-06-04",
+        "settled_micro": 14453,
+        "settled_usd": "0.01",
+        "settles": 1,
+        "buyers": 1,
+        "tokens_in": 11474,
+        "tokens_out": 17330
+      },
+      {
+        "day": "2026-06-05",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-06",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-07",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-08",
+        "settled_micro": 16389,
+        "settled_usd": "0.02",
+        "settles": 3,
+        "buyers": 3,
+        "tokens_in": 14186,
+        "tokens_out": 3327
+      },
+      {
+        "day": "2026-06-09",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-10",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-11",
+        "settled_micro": 8,
+        "settled_usd": "0.00",
+        "settles": 1,
+        "buyers": 1,
+        "tokens_in": 53,
+        "tokens_out": 250
+      },
+      {
+        "day": "2026-06-12",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-13",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-14",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-15",
+        "settled_micro": 20260,
+        "settled_usd": "0.02",
+        "settles": 2,
+        "buyers": 1,
+        "tokens_in": 107073,
+        "tokens_out": 466
+      },
+      {
+        "day": "2026-06-16",
+        "settled_micro": 10008,
+        "settled_usd": "0.01",
+        "settles": 3,
+        "buyers": 1,
+        "tokens_in": 16,
+        "tokens_out": 10
+      },
+      {
+        "day": "2026-06-17",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-18",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-19",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-20",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-21",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-22",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-23",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-24",
+        "settled_micro": 50485,
+        "settled_usd": "0.05",
+        "settles": 11,
+        "buyers": 1,
+        "tokens_in": 45952,
+        "tokens_out": 353
+      },
+      {
+        "day": "2026-06-25",
+        "settled_micro": 80968,
+        "settled_usd": "0.08",
+        "settles": 16,
+        "buyers": 2,
+        "tokens_in": 140847,
+        "tokens_out": 14456
+      },
+      {
+        "day": "2026-06-26",
+        "settled_micro": 99090,
+        "settled_usd": "0.10",
+        "settles": 19,
+        "buyers": 2,
+        "tokens_in": 174759,
+        "tokens_out": 14191
+      },
+      {
+        "day": "2026-06-27",
+        "settled_micro": 38025,
+        "settled_usd": "0.04",
+        "settles": 10,
+        "buyers": 1,
+        "tokens_in": 29689,
+        "tokens_out": 176
+      },
+      {
+        "day": "2026-06-28",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-06-29",
+        "settled_micro": 41473,
+        "settled_usd": "0.04",
+        "settles": 3,
+        "buyers": 2,
+        "tokens_in": 351616,
+        "tokens_out": 2002
+      },
+      {
+        "day": "2026-06-30",
+        "settled_micro": 74256,
+        "settled_usd": "0.07",
+        "settles": 17,
+        "buyers": 1,
+        "tokens_in": 64776,
+        "tokens_out": 378
+      },
+      {
+        "day": "2026-07-01",
+        "settled_micro": 177723,
+        "settled_usd": "0.18",
+        "settles": 8,
+        "buyers": 2,
+        "tokens_in": 3050164,
+        "tokens_out": 23593
+      },
+      {
+        "day": "2026-07-02",
+        "settled_micro": 66389,
+        "settled_usd": "0.07",
+        "settles": 14,
+        "buyers": 2,
+        "tokens_in": 50259,
+        "tokens_out": 791
+      },
+      {
+        "day": "2026-07-03",
+        "settled_micro": 59861,
+        "settled_usd": "0.06",
+        "settles": 13,
+        "buyers": 1,
+        "tokens_in": 53980,
+        "tokens_out": 320
+      },
+      {
+        "day": "2026-07-04",
+        "settled_micro": 88416,
+        "settled_usd": "0.09",
+        "settles": 20,
+        "buyers": 1,
+        "tokens_in": 64776,
+        "tokens_out": 384
+      },
+      {
+        "day": "2026-07-05",
+        "settled_micro": 95472,
+        "settled_usd": "0.10",
+        "settles": 21,
+        "buyers": 1,
+        "tokens_in": 64776,
+        "tokens_out": 384
+      },
+      {
+        "day": "2026-07-06",
+        "settled_micro": 46863,
+        "settled_usd": "0.05",
+        "settles": 10,
+        "buyers": 1,
+        "tokens_in": 35087,
+        "tokens_out": 208
+      },
+      {
+        "day": "2026-07-07",
+        "settled_micro": 114122,
+        "settled_usd": "0.11",
+        "settles": 20,
+        "buyers": 2,
+        "tokens_in": 62082,
+        "tokens_out": 359
+      },
+      {
+        "day": "2026-07-08",
+        "settled_micro": 98445,
+        "settled_usd": "0.10",
+        "settles": 20,
+        "buyers": 1,
+        "tokens_in": 64781,
+        "tokens_out": 372
+      },
+      {
+        "day": "2026-07-09",
+        "settled_micro": 227307,
+        "settled_usd": "0.23",
+        "settles": 23,
+        "buyers": 1,
+        "tokens_in": 64871,
+        "tokens_out": 240
+      },
+      {
+        "day": "2026-07-10",
+        "settled_micro": 217851,
+        "settled_usd": "0.22",
+        "settles": 20,
+        "buyers": 1,
+        "tokens_in": 64881,
+        "tokens_out": 241
+      },
+      {
+        "day": "2026-07-11",
+        "settled_micro": 235191,
+        "settled_usd": "0.24",
+        "settles": 21,
+        "buyers": 1,
+        "tokens_in": 64896,
+        "tokens_out": 234
+      },
+      {
+        "day": "2026-07-12",
+        "settled_micro": 254733,
+        "settled_usd": "0.25",
+        "settles": 23,
+        "buyers": 1,
+        "tokens_in": 64896,
+        "tokens_out": 242
+      },
+      {
+        "day": "2026-07-13",
+        "settled_micro": 256887,
+        "settled_usd": "0.26",
+        "settles": 24,
+        "buyers": 1,
+        "tokens_in": 64891,
+        "tokens_out": 201
+      },
+      {
+        "day": "2026-07-14",
+        "settled_micro": 233055,
+        "settled_usd": "0.23",
+        "settles": 21,
+        "buyers": 2,
+        "tokens_in": 62192,
+        "tokens_out": 168
+      },
+      {
+        "day": "2026-07-15",
+        "settled_micro": 88288,
+        "settled_usd": "0.09",
+        "settles": 8,
+        "buyers": 1,
+        "tokens_in": 21632,
+        "tokens_out": 88
+      },
+      {
+        "day": "2026-07-16",
+        "settled_micro": 213299,
+        "settled_usd": "0.21",
+        "settles": 19,
+        "buyers": 1,
+        "tokens_in": 59488,
+        "tokens_out": 221
+      },
+      {
+        "day": "2026-07-17",
+        "settled_micro": 30150,
+        "settled_usd": "0.03",
+        "settles": 7,
+        "buyers": 1,
+        "tokens_in": 48582,
+        "tokens_out": 288
+      },
+      {
+        "day": "2026-07-18",
+        "settled_micro": 43443,
+        "settled_usd": "0.04",
+        "settles": 11,
+        "buyers": 1,
+        "tokens_in": 67475,
+        "tokens_out": 400
+      },
+      {
+        "day": "2026-07-19",
+        "settled_micro": 56648,
+        "settled_usd": "0.06",
+        "settles": 15,
+        "buyers": 1,
+        "tokens_in": 64776,
+        "tokens_out": 382
+      },
+      {
+        "day": "2026-07-20",
+        "settled_micro": 22203,
+        "settled_usd": "0.02",
+        "settles": 7,
+        "buyers": 1,
+        "tokens_in": 45883,
+        "tokens_out": 272
+      },
+      {
+        "day": "2026-07-21",
+        "settled_micro": 54907,
+        "settled_usd": "0.05",
+        "settles": 7,
+        "buyers": 2,
+        "tokens_in": 4408,
+        "tokens_out": 69
+      },
+      {
+        "day": "2026-07-22",
+        "settled_micro": 69417,
+        "settled_usd": "0.07",
+        "settles": 10,
+        "buyers": 2,
+        "tokens_in": 14242,
+        "tokens_out": 458
+      },
+      {
+        "day": "2026-07-23",
+        "settled_micro": 72426,
+        "settled_usd": "0.07",
+        "settles": 19,
+        "buyers": 1,
+        "tokens_in": 48614,
+        "tokens_out": 350
+      },
+      {
+        "day": "2026-07-24",
+        "settled_micro": 69830,
+        "settled_usd": "0.07",
+        "settles": 20,
+        "buyers": 1,
+        "tokens_in": 53996,
+        "tokens_out": 344
+      },
+      {
+        "day": "2026-07-25",
+        "settled_micro": 54386,
+        "settled_usd": "0.05",
+        "settles": 14,
+        "buyers": 1,
+        "tokens_in": 43200,
+        "tokens_out": 283
+      },
+      {
+        "day": "2026-07-26",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-07-27",
+        "settled_micro": 45576,
+        "settled_usd": "0.05",
+        "settles": 1,
+        "buyers": 1,
+        "tokens_in": 32163,
+        "tokens_out": 4623
+      },
+      {
+        "day": "2026-07-28",
+        "settled_micro": 451700,
+        "settled_usd": "0.45",
+        "settles": 8,
+        "buyers": 5,
+        "tokens_in": 451003,
+        "tokens_out": 17963
+      },
+      {
+        "day": "2026-07-29",
+        "settled_micro": 491,
+        "settled_usd": "0.00",
+        "settles": 3,
+        "buyers": 3,
+        "tokens_in": 2969,
+        "tokens_out": 456
+      },
+      {
+        "day": "2026-07-30",
+        "settled_micro": 3,
+        "settled_usd": "0.00",
+        "settles": 1,
+        "buyers": 1,
+        "tokens_in": 90,
+        "tokens_out": 102
+      },
+      {
+        "day": "2026-07-31",
+        "settled_micro": 183281,
+        "settled_usd": "0.18",
+        "settles": 9,
+        "buyers": 2,
+        "tokens_in": 314365,
+        "tokens_out": 11706
+      },
+      {
+        "day": "2026-08-01",
+        "settled_micro": 257168,
+        "settled_usd": "0.26",
+        "settles": 20,
+        "buyers": 4,
+        "tokens_in": 1218987,
+        "tokens_out": 30779
+      },
+      {
+        "day": "2026-08-02",
+        "settled_micro": 356414,
+        "settled_usd": "0.36",
+        "settles": 27,
+        "buyers": 2,
+        "tokens_in": 1699133,
+        "tokens_out": 57799
+      },
+      {
+        "day": "2026-08-03",
+        "settled_micro": 71937,
+        "settled_usd": "0.07",
+        "settles": 10,
+        "buyers": 3,
+        "tokens_in": 45904,
+        "tokens_out": 11802
+      },
+      {
+        "day": "2026-08-04",
+        "settled_micro": 175523,
+        "settled_usd": "0.18",
+        "settles": 14,
+        "buyers": 3,
+        "tokens_in": 133445,
+        "tokens_out": 24247
+      },
+      {
+        "day": "2026-08-05",
+        "settled_micro": 200955,
+        "settled_usd": "0.20",
+        "settles": 9,
+        "buyers": 4,
+        "tokens_in": 130448,
+        "tokens_out": 26979
+      },
+      {
+        "day": "2026-08-06",
+        "settled_micro": 900017,
+        "settled_usd": "0.90",
+        "settles": 13,
+        "buyers": 4,
+        "tokens_in": 208689,
+        "tokens_out": 63417
+      },
+      {
+        "day": "2026-08-07",
+        "settled_micro": 1019164,
+        "settled_usd": "1.02",
+        "settles": 26,
+        "buyers": 3,
+        "tokens_in": 934462,
+        "tokens_out": 87954
+      },
+      {
+        "day": "2026-08-08",
+        "settled_micro": 21608,
+        "settled_usd": "0.02",
+        "settles": 3,
+        "buyers": 1,
+        "tokens_in": 15081,
+        "tokens_out": 11
+      },
+      {
+        "day": "2026-08-09",
+        "settled_micro": 253909,
+        "settled_usd": "0.25",
+        "settles": 5,
+        "buyers": 1,
+        "tokens_in": 34161,
+        "tokens_out": 16105
+      },
+      {
+        "day": "2026-08-10",
+        "settled_micro": 1455445,
+        "settled_usd": "1.46",
+        "settles": 9,
+        "buyers": 2,
+        "tokens_in": 250580,
+        "tokens_out": 91185
+      },
+      {
+        "day": "2026-08-11",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-08-12",
+        "settled_micro": 1397507,
+        "settled_usd": "1.40",
+        "settles": 5,
+        "buyers": 2,
+        "tokens_in": 344615,
+        "tokens_out": 5390
+      },
+      {
+        "day": "2026-08-13",
+        "settled_micro": 33697,
+        "settled_usd": "0.03",
+        "settles": 1,
+        "buyers": 1,
+        "tokens_in": 46536,
+        "tokens_out": 49
+      },
+      {
+        "day": "2026-08-14",
+        "settled_micro": 34817,
+        "settled_usd": "0.03",
+        "settles": 2,
+        "buyers": 2,
+        "tokens_in": 96693,
+        "tokens_out": 579
+      },
+      {
+        "day": "2026-08-15",
+        "settled_micro": 471000,
+        "settled_usd": "0.47",
+        "settles": 4,
+        "buyers": 2,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-08-16",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-08-17",
+        "settled_micro": 79730,
+        "settled_usd": "0.08",
+        "settles": 5,
+        "buyers": 2,
+        "tokens_in": 3302487,
+        "tokens_out": 35147
+      },
+      {
+        "day": "2026-08-18",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-08-19",
+        "settled_micro": 24616,
+        "settled_usd": "0.02",
+        "settles": 6,
+        "buyers": 1,
+        "tokens_in": 31234,
+        "tokens_out": 1410
+      },
+      {
+        "day": "2026-08-20",
+        "settled_micro": 176601,
+        "settled_usd": "0.18",
+        "settles": 14,
+        "buyers": 7,
+        "tokens_in": 136167,
+        "tokens_out": 22339
+      },
+      {
+        "day": "2026-08-21",
+        "settled_micro": 325810,
+        "settled_usd": "0.33",
+        "settles": 28,
+        "buyers": 3,
+        "tokens_in": 451661,
+        "tokens_out": 65871
+      },
+      {
+        "day": "2026-08-22",
+        "settled_micro": 149888,
+        "settled_usd": "0.15",
+        "settles": 20,
+        "buyers": 3,
+        "tokens_in": 197819,
+        "tokens_out": 31815
+      },
+      {
+        "day": "2026-08-23",
+        "settled_micro": 462683,
+        "settled_usd": "0.46",
+        "settles": 15,
+        "buyers": 4,
+        "tokens_in": 37829,
+        "tokens_out": 20088
+      },
+      {
+        "day": "2026-08-24",
+        "settled_micro": 479624,
+        "settled_usd": "0.48",
+        "settles": 13,
+        "buyers": 4,
+        "tokens_in": 590924,
+        "tokens_out": 12771
+      },
+      {
+        "day": "2026-08-25",
+        "settled_micro": 526837,
+        "settled_usd": "0.53",
+        "settles": 2,
+        "buyers": 2,
+        "tokens_in": 898,
+        "tokens_out": 12382
+      },
+      {
+        "day": "2026-08-26",
+        "settled_micro": 730309,
+        "settled_usd": "0.73",
+        "settles": 7,
+        "buyers": 4,
+        "tokens_in": 4181,
+        "tokens_out": 14367
+      },
+      {
+        "day": "2026-08-27",
+        "settled_micro": 644078,
+        "settled_usd": "0.64",
+        "settles": 5,
+        "buyers": 4,
+        "tokens_in": 16523,
+        "tokens_out": 16361
+      },
+      {
+        "day": "2026-08-28",
+        "settled_micro": 716141,
+        "settled_usd": "0.72",
+        "settles": 5,
+        "buyers": 3,
+        "tokens_in": 3304,
+        "tokens_out": 16120
+      },
+      {
+        "day": "2026-08-29",
+        "settled_micro": 499347,
+        "settled_usd": "0.50",
+        "settles": 2,
+        "buyers": 2,
+        "tokens_in": 689,
+        "tokens_out": 10339
+      },
+      {
+        "day": "2026-08-30",
+        "settled_micro": 2613464,
+        "settled_usd": "2.61",
+        "settles": 8,
+        "buyers": 3,
+        "tokens_in": 909128,
+        "tokens_out": 116083
+      },
+      {
+        "day": "2026-08-31",
+        "settled_micro": 1533079,
+        "settled_usd": "1.53",
+        "settles": 6,
+        "buyers": 3,
+        "tokens_in": 62345,
+        "tokens_out": 10511
+      },
+      {
+        "day": "2026-09-01",
+        "settled_micro": 3316,
+        "settled_usd": "0.00",
+        "settles": 2,
+        "buyers": 1,
+        "tokens_in": 6620,
+        "tokens_out": 4
+      },
+      {
+        "day": "2026-09-02",
+        "settled_micro": 2012536,
+        "settled_usd": "2.01",
+        "settles": 17,
+        "buyers": 5,
+        "tokens_in": 399879,
+        "tokens_out": 106975
+      },
+      {
+        "day": "2026-09-03",
+        "settled_micro": 12673424,
+        "settled_usd": "12.67",
+        "settles": 59,
+        "buyers": 7,
+        "tokens_in": 12097662,
+        "tokens_out": 680843
+      },
+      {
+        "day": "2026-09-04",
+        "settled_micro": 6629270,
+        "settled_usd": "6.63",
+        "settles": 45,
+        "buyers": 4,
+        "tokens_in": 1609070,
+        "tokens_out": 562741
+      },
+      {
+        "day": "2026-09-05",
+        "settled_micro": 2074081,
+        "settled_usd": "2.07",
+        "settles": 19,
+        "buyers": 4,
+        "tokens_in": 372639,
+        "tokens_out": 128640
+      },
+      {
+        "day": "2026-09-06",
+        "settled_micro": 1681141,
+        "settled_usd": "1.68",
+        "settles": 12,
+        "buyers": 3,
+        "tokens_in": 168574,
+        "tokens_out": 59495
+      },
+      {
+        "day": "2026-09-07",
+        "settled_micro": 413826,
+        "settled_usd": "0.41",
+        "settles": 24,
+        "buyers": 4,
+        "tokens_in": 572171,
+        "tokens_out": 131423
+      },
+      {
+        "day": "2026-09-08",
+        "settled_micro": 224274,
+        "settled_usd": "0.22",
+        "settles": 14,
+        "buyers": 2,
+        "tokens_in": 321333,
+        "tokens_out": 44201
+      },
+      {
+        "day": "2026-09-09",
+        "settled_micro": 22284,
+        "settled_usd": "0.02",
+        "settles": 2,
+        "buyers": 1,
+        "tokens_in": 33500,
+        "tokens_out": 4552
+      },
+      {
+        "day": "2026-09-10",
+        "settled_micro": 221139,
+        "settled_usd": "0.22",
+        "settles": 13,
+        "buyers": 2,
+        "tokens_in": 268340,
+        "tokens_out": 44826
+      },
+      {
+        "day": "2026-09-11",
+        "settled_micro": 35338,
+        "settled_usd": "0.04",
+        "settles": 5,
+        "buyers": 2,
+        "tokens_in": 70687,
+        "tokens_out": 6230
+      },
+      {
+        "day": "2026-09-12",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-09-13",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-09-14",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 0,
+        "tokens_out": 0
+      },
+      {
+        "day": "2026-09-15",
+        "settled_micro": 829946,
+        "settled_usd": "0.83",
+        "settles": 35,
+        "buyers": 3,
+        "tokens_in": 803398,
+        "tokens_out": 182925
+      },
+      {
+        "day": "2026-09-16",
+        "settled_micro": 2812381,
+        "settled_usd": "2.81",
+        "settles": 42,
+        "buyers": 5,
+        "tokens_in": 1792859,
+        "tokens_out": 222130
+      },
+      {
+        "day": "2026-09-17",
+        "settled_micro": 21671303,
+        "settled_usd": "21.67",
+        "settles": 47,
+        "buyers": 7,
+        "tokens_in": 5087349,
+        "tokens_out": 102986
+      },
+      {
+        "day": "2026-09-18",
+        "settled_micro": 23716158,
+        "settled_usd": "23.72",
+        "settles": 46,
+        "buyers": 5,
+        "tokens_in": 11594586,
+        "tokens_out": 46957
+      },
+      {
+        "day": "2026-09-19",
+        "settled_micro": 7549919,
+        "settled_usd": "7.55",
+        "settles": 37,
+        "buyers": 5,
+        "tokens_in": 3198718,
+        "tokens_out": 76707
+      },
+      {
+        "day": "2026-09-20",
+        "settled_micro": 675870,
+        "settled_usd": "0.68",
+        "settles": 25,
+        "buyers": 2,
+        "tokens_in": 309706,
+        "tokens_out": 40672
+      },
+      {
+        "day": "2026-09-21",
+        "settled_micro": 3,
+        "settled_usd": "0.00",
+        "settles": 1,
+        "buyers": 1,
+        "tokens_in": 97,
+        "tokens_out": 70
+      },
+      {
+        "day": "2026-09-22",
+        "settled_micro": 3193115,
+        "settled_usd": "3.19",
+        "settles": 15,
+        "buyers": 6,
+        "tokens_in": 1106028,
+        "tokens_out": 50831
+      },
+      {
+        "day": "2026-09-23",
+        "settled_micro": 8694266,
+        "settled_usd": "8.69",
+        "settles": 14,
+        "buyers": 4,
+        "tokens_in": 11893082,
+        "tokens_out": 62460
+      },
+      {
+        "day": "2026-09-24",
+        "settled_micro": 440817,
+        "settled_usd": "0.44",
+        "settles": 5,
+        "buyers": 5,
+        "tokens_in": 68662,
+        "tokens_out": 6559
+      },
+      {
+        "day": "2026-09-25",
+        "settled_micro": 36389254,
+        "settled_usd": "36.39",
+        "settles": 83,
+        "buyers": 8,
+        "tokens_in": 41436554,
+        "tokens_out": 1294523
+      },
+      {
+        "day": "2026-09-26",
+        "settled_micro": 12972727,
+        "settled_usd": "12.97",
+        "settles": 50,
+        "buyers": 6,
+        "tokens_in": 16827145,
+        "tokens_out": 379940
+      },
+      {
+        "day": "2026-09-27",
+        "settled_micro": 30972215,
+        "settled_usd": "30.97",
+        "settles": 62,
+        "buyers": 6,
+        "tokens_in": 41583010,
+        "tokens_out": 1341465
+      },
+      {
+        "day": "2026-09-28",
+        "settled_micro": 39016977,
+        "settled_usd": "39.02",
+        "settles": 105,
+        "buyers": 13,
+        "tokens_in": 59552865,
+        "tokens_out": 1254972
+      },
+      {
+        "day": "2026-09-29",
+        "settled_micro": 38441330,
+        "settled_usd": "38.44",
+        "settles": 104,
+        "buyers": 10,
+        "tokens_in": 47761578,
+        "tokens_out": 552301
+      },
+      {
+        "day": "2026-09-30",
+        "settled_micro": 59324188,
+        "settled_usd": "59.32",
+        "settles": 106,
+        "buyers": 11,
+        "tokens_in": 94823991,
+        "tokens_out": 1105070
+      },
+      {
+        "day": "2026-10-01",
+        "settled_micro": 8093495,
+        "settled_usd": "8.09",
+        "settles": 109,
+        "buyers": 10,
+        "tokens_in": 64998958,
+        "tokens_out": 1170975
+      },
+      {
+        "day": "2026-10-02",
+        "settled_micro": 5863034,
+        "settled_usd": "5.86",
+        "settles": 79,
+        "buyers": 10,
+        "tokens_in": 31481268,
+        "tokens_out": 394538
+      },
+      {
+        "day": "2026-10-03",
+        "settled_micro": 3014765,
+        "settled_usd": "3.01",
+        "settles": 34,
+        "buyers": 9,
+        "tokens_in": 25967791,
+        "tokens_out": 253323
+      },
+      {
+        "day": "2026-10-04",
+        "settled_micro": 6795899,
+        "settled_usd": "6.80",
+        "settles": 29,
+        "buyers": 6,
+        "tokens_in": 4962606,
+        "tokens_out": 71564
+      },
+      {
+        "day": "2026-10-05",
+        "settled_micro": 7654209,
+        "settled_usd": "7.65",
+        "settles": 44,
+        "buyers": 9,
+        "tokens_in": 12615433,
+        "tokens_out": 174262
+      },
+      {
+        "day": "2026-10-06",
+        "settled_micro": 16552591,
+        "settled_usd": "16.55",
+        "settles": 50,
+        "buyers": 8,
+        "tokens_in": 15410489,
+        "tokens_out": 182800
+      },
+      {
+        "day": "2026-10-07",
+        "settled_micro": 5587590,
+        "settled_usd": "5.59",
+        "settles": 51,
+        "buyers": 20,
+        "tokens_in": 34795789,
+        "tokens_out": 690154
+      },
+      {
+        "day": "2026-10-08",
+        "settled_micro": 14599638,
+        "settled_usd": "14.60",
+        "settles": 79,
+        "buyers": 28,
+        "tokens_in": 88153458,
+        "tokens_out": 1356182
+      },
+      {
+        "day": "2026-10-09",
+        "settled_micro": 9083744,
+        "settled_usd": "9.08",
+        "settles": 39,
+        "buyers": 11,
+        "tokens_in": 51341925,
+        "tokens_out": 323586
+      },
+      {
+        "day": "2026-10-10",
+        "settled_micro": 2168955,
+        "settled_usd": "2.17",
+        "settles": 20,
+        "buyers": 10,
+        "tokens_in": 28925137,
+        "tokens_out": 195334
+      },
+      {
+        "day": "2026-10-11",
+        "settled_micro": 3040665,
+        "settled_usd": "3.04",
+        "settles": 23,
+        "buyers": 10,
+        "tokens_in": 16227869,
+        "tokens_out": 218760
+      },
+      {
+        "day": "2026-10-12",
+        "settled_micro": 4421359,
+        "settled_usd": "4.42",
+        "settles": 15,
+        "buyers": 7,
+        "tokens_in": 6234212,
+        "tokens_out": 66939
+      },
+      {
+        "day": "2026-10-13",
+        "settled_micro": 7734161,
+        "settled_usd": "7.73",
+        "settles": 37,
+        "buyers": 14,
+        "tokens_in": 143263015,
+        "tokens_out": 584294
+      },
+      {
+        "day": "2026-10-14",
+        "settled_micro": 1143735,
+        "settled_usd": "1.14",
+        "settles": 11,
+        "buyers": 6,
+        "tokens_in": 8174974,
+        "tokens_out": 80563
+      },
+      {
+        "day": "2026-10-15",
+        "settled_micro": 3605543,
+        "settled_usd": "3.61",
+        "settles": 17,
+        "buyers": 9,
+        "tokens_in": 2342654,
+        "tokens_out": 124402
+      },
+      {
+        "day": "2026-10-16",
+        "settled_micro": 4629359,
+        "settled_usd": "4.63",
+        "settles": 19,
+        "buyers": 10,
+        "tokens_in": 5752170,
+        "tokens_out": 49844
+      },
+      {
+        "day": "2026-10-17",
+        "settled_micro": 3905999,
+        "settled_usd": "3.91",
+        "settles": 23,
+        "buyers": 7,
+        "tokens_in": 935866,
+        "tokens_out": 278026
+      },
+      {
+        "day": "2026-10-18",
+        "settled_micro": 263034,
+        "settled_usd": "0.26",
+        "settles": 10,
+        "buyers": 6,
+        "tokens_in": 277875,
+        "tokens_out": 11801
+      },
+      {
+        "day": "2026-10-19",
+        "settled_micro": 8625709,
+        "settled_usd": "8.63",
+        "settles": 24,
+        "buyers": 8,
+        "tokens_in": 7331589,
+        "tokens_out": 251015
+      },
+      {
+        "day": "2026-10-20",
+        "settled_micro": 16113464,
+        "settled_usd": "16.11",
+        "settles": 39,
+        "buyers": 14,
+        "tokens_in": 9124792,
+        "tokens_out": 224819
+      },
+      {
+        "day": "2026-10-21",
+        "settled_micro": 2911388,
+        "settled_usd": "2.91",
+        "settles": 29,
+        "buyers": 19,
+        "tokens_in": 8876827,
+        "tokens_out": 301827
+      },
+      {
+        "day": "2026-10-22",
+        "settled_micro": 1938421,
+        "settled_usd": "1.94",
+        "settles": 27,
+        "buyers": 15,
+        "tokens_in": 8264866,
+        "tokens_out": 93241
+      },
+      {
+        "day": "2026-10-23",
+        "settled_micro": 692094,
+        "settled_usd": "0.69",
+        "settles": 20,
+        "buyers": 13,
+        "tokens_in": 5278175,
+        "tokens_out": 154344
+      },
+      {
+        "day": "2026-10-24",
+        "settled_micro": 14138680,
+        "settled_usd": "14.14",
+        "settles": 46,
+        "buyers": 9,
+        "tokens_in": 4713134,
+        "tokens_out": 164034
+      },
+      {
+        "day": "2026-10-25",
+        "settled_micro": 1400492,
+        "settled_usd": "1.40",
+        "settles": 32,
+        "buyers": 13,
+        "tokens_in": 7919107,
+        "tokens_out": 597110
+      },
+      {
+        "day": "2026-10-26",
+        "settled_micro": 6627641,
+        "settled_usd": "6.63",
+        "settles": 62,
+        "buyers": 11,
+        "tokens_in": 1650975,
+        "tokens_out": 443365
+      },
+      {
+        "day": "2026-10-27",
+        "settled_micro": 19945384,
+        "settled_usd": "19.95",
+        "settles": 47,
+        "buyers": 12,
+        "tokens_in": 23770399,
+        "tokens_out": 176560
+      },
+      {
+        "day": "2026-10-28",
+        "settled_micro": 4755890,
+        "settled_usd": "4.76",
+        "settles": 58,
+        "buyers": 16,
+        "tokens_in": 12477862,
+        "tokens_out": 667877
+      },
+      {
+        "day": "2026-10-29",
+        "settled_micro": 15663558,
+        "settled_usd": "15.66",
+        "settles": 69,
+        "buyers": 16,
+        "tokens_in": 59442156,
+        "tokens_out": 396357
+      },
+      {
+        "day": "2026-10-30",
+        "settled_micro": 19496086,
+        "settled_usd": "19.50",
+        "settles": 75,
+        "buyers": 15,
+        "tokens_in": 27337119,
+        "tokens_out": 462687
+      },
+      {
+        "day": "2026-10-31",
+        "settled_micro": 12376776,
+        "settled_usd": "12.38",
+        "settles": 63,
+        "buyers": 12,
+        "tokens_in": 57401407,
+        "tokens_out": 1176013
+      },
+      {
+        "day": "2026-11-01",
+        "settled_micro": 11626465,
+        "settled_usd": "11.63",
+        "settles": 73,
+        "buyers": 19,
+        "tokens_in": 54529060,
+        "tokens_out": 1465344
+      },
+      {
+        "day": "2026-11-02",
+        "settled_micro": 9809301,
+        "settled_usd": "9.81",
+        "settles": 58,
+        "buyers": 15,
+        "tokens_in": 14323387,
+        "tokens_out": 476245
+      },
+      {
+        "day": "2026-11-03",
+        "settled_micro": 4678478,
+        "settled_usd": "4.68",
+        "settles": 34,
+        "buyers": 12,
+        "tokens_in": 7959433,
+        "tokens_out": 365248
+      },
+      {
+        "day": "2026-11-04",
+        "settled_micro": 11975711,
+        "settled_usd": "11.98",
+        "settles": 116,
+        "buyers": 21,
+        "tokens_in": 40788832,
+        "tokens_out": 1413604
+      },
+      {
+        "day": "2026-11-05",
+        "settled_micro": 4263040,
+        "settled_usd": "4.26",
+        "settles": 55,
+        "buyers": 14,
+        "tokens_in": 31724522,
+        "tokens_out": 1388346
+      },
+      {
+        "day": "2026-11-06",
+        "settled_micro": 14383248,
+        "settled_usd": "14.38",
+        "settles": 51,
+        "buyers": 17,
+        "tokens_in": 77221619,
+        "tokens_out": 780359
+      },
+      {
+        "day": "2026-11-07",
+        "settled_micro": 5939919,
+        "settled_usd": "5.94",
+        "settles": 51,
+        "buyers": 18,
+        "tokens_in": 47583801,
+        "tokens_out": 686062
+      },
+      {
+        "day": "2026-11-08",
+        "settled_micro": 13089369,
+        "settled_usd": "13.09",
+        "settles": 66,
+        "buyers": 13,
+        "tokens_in": 92392362,
+        "tokens_out": 870719
+      },
+      {
+        "day": "2026-11-09",
+        "settled_micro": 3459978,
+        "settled_usd": "3.46",
+        "settles": 32,
+        "buyers": 13,
+        "tokens_in": 10685069,
+        "tokens_out": 99234
+      },
+      {
+        "day": "2026-11-10",
+        "settled_micro": 2004892,
+        "settled_usd": "2.00",
+        "settles": 24,
+        "buyers": 11,
+        "tokens_in": 16818843,
+        "tokens_out": 215038
+      },
+      {
+        "day": "2026-11-11",
+        "settled_micro": 745260,
+        "settled_usd": "0.75",
+        "settles": 20,
+        "buyers": 10,
+        "tokens_in": 10087485,
+        "tokens_out": 185034
+      },
+      {
+        "day": "2026-11-12",
+        "settled_micro": 1072196,
+        "settled_usd": "1.07",
+        "settles": 21,
+        "buyers": 10,
+        "tokens_in": 780695,
+        "tokens_out": 210193
+      },
+      {
+        "day": "2026-11-13",
+        "settled_micro": 1741014,
+        "settled_usd": "1.74",
+        "settles": 17,
+        "buyers": 9,
+        "tokens_in": 53244444,
+        "tokens_out": 355157
+      },
+      {
+        "day": "2026-11-14",
+        "settled_micro": 723696,
+        "settled_usd": "0.72",
+        "settles": 24,
+        "buyers": 8,
+        "tokens_in": 519815,
+        "tokens_out": 156692
+      },
+      {
+        "day": "2026-11-15",
+        "settled_micro": 293287,
+        "settled_usd": "0.29",
+        "settles": 6,
+        "buyers": 4,
+        "tokens_in": 340305,
+        "tokens_out": 19201
+      },
+      {
+        "day": "2026-11-16",
+        "settled_micro": 1211662,
+        "settled_usd": "1.21",
+        "settles": 30,
+        "buyers": 11,
+        "tokens_in": 17250525,
+        "tokens_out": 206648
+      },
+      {
+        "day": "2026-11-17",
+        "settled_micro": 4404041,
+        "settled_usd": "4.40",
+        "settles": 22,
+        "buyers": 10,
+        "tokens_in": 1197064,
+        "tokens_out": 53722
+      },
+      {
+        "day": "2026-11-18",
+        "settled_micro": 157489,
+        "settled_usd": "0.16",
+        "settles": 39,
+        "buyers": 16,
+        "tokens_in": 2046212,
+        "tokens_out": 316150
+      },
+      {
+        "day": "2026-11-19",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 9184464,
+        "tokens_out": 297220
+      },
+      {
+        "day": "2026-11-20",
+        "settled_micro": 0,
+        "settled_usd": "0.00",
+        "settles": 0,
+        "buyers": 0,
+        "tokens_in": 242248,
+        "tokens_out": 196612
+      }
+    ]
+  },
+  "models": [
+    {
+      "model": "claude-opus-5-5",
+      "model_display": "Claude Opus 5.5",
+      "advertised_as": "claude-opus-5.5",
+      "modality": "text",
+      "free": false,
+      "input_usd_per_m": 3.8,
+      "cached_input_usd_per_m": 0.19,
+      "output_usd_per_m": 19,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": 5
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "model_display": "Claude Sonnet 5.5",
+      "advertised_as": "claude-sonnet-5.5",
+      "modality": "text",
+      "free": false,
+      "input_usd_per_m": 1.9,
+      "cached_input_usd_per_m": 0.095,
+      "output_usd_per_m": 9.5,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": 5
+    },
+    {
+      "model": "claude-fable-5-1",
+      "model_display": "Claude Fable 5.1",
+      "advertised_as": "claude-fable-5.1",
+      "modality": "text",
+      "free": false,
+      "input_usd_per_m": 9.5,
+      "cached_input_usd_per_m": 0.2375,
+      "output_usd_per_m": 47.5,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": 5
+    },
+    {
+      "model": "openai-gpt-6-astra",
+      "model_display": "GPT-6 Astra",
+      "advertised_as": "gpt-6-astra",
+      "modality": "text",
+      "free": false,
+      "input_usd_per_m": 5.9,
+      "cached_input_usd_per_m": 0.59,
+      "output_usd_per_m": 29.5,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": 41
+    },
+    {
+      "model": "openai-gpt-61-sol",
+      "model_display": "GPT-6.1 Sol",
+      "advertised_as": "gpt-6.1-sol",
+      "modality": "text",
+      "free": false,
+      "input_usd_per_m": 1.18,
+      "cached_input_usd_per_m": 0.059,
+      "output_usd_per_m": 5.9,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": 41
+    },
+    {
+      "model": "gemini-3-1-pro-preview",
+      "model_display": "Gemini 3.1 Pro Preview",
+      "advertised_as": "gemini-3.1-pro-preview",
+      "modality": "text",
+      "free": false,
+      "input_usd_per_m": 1.54,
+      "cached_input_usd_per_m": 0.154,
+      "output_usd_per_m": 9.24,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": 23
+    },
+    {
+      "model": "gemini-3-flash-preview",
+      "model_display": "Gemini 3 Flash Preview",
+      "advertised_as": "gemini-3-flash-preview",
+      "modality": "text",
+      "free": false,
+      "input_usd_per_m": 0.295,
+      "cached_input_usd_per_m": 0.0295,
+      "output_usd_per_m": 1.77,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": 41
+    },
+    {
+      "model": "grok-4-7",
+      "model_display": "Grok 4.7",
+      "advertised_as": "grok-4.7",
+      "modality": "text",
+      "free": false,
+      "input_usd_per_m": 1.9,
+      "cached_input_usd_per_m": 0.475,
+      "output_usd_per_m": 5.7,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": 5
+    },
+    {
+      "model": "z-ai-glm-5-3",
+      "model_display": "GLM 5.3",
+      "advertised_as": "glm-5.3",
+      "modality": "text",
+      "free": false,
+      "input_usd_per_m": 1.19,
+      "cached_input_usd_per_m": 0.221,
+      "output_usd_per_m": 3.74,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": 32
+    },
+    {
+      "model": "deepseek-v4-pro-0813",
+      "model_display": "DeepSeek V4 Pro 0813",
+      "advertised_as": "deepseek-v4-pro-0813",
+      "modality": "text",
+      "free": false,
+      "input_usd_per_m": 1.5,
+      "cached_input_usd_per_m": 0.05,
+      "output_usd_per_m": 4.5,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": null
+    },
+    {
+      "model": "kimi-k3",
+      "model_display": "Kimi K3",
+      "advertised_as": "kimi-k3",
+      "modality": "text",
+      "free": false,
+      "input_usd_per_m": 3,
+      "cached_input_usd_per_m": 0.3,
+      "output_usd_per_m": 15,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": 20
+    },
+    {
+      "model": "kimi-k3-1-pro",
+      "model_display": "Kimi K3.1 Pro",
+      "advertised_as": "kimi-k3.1-pro",
+      "modality": "text",
+      "free": false,
+      "input_usd_per_m": 2,
+      "cached_input_usd_per_m": 0.2,
+      "output_usd_per_m": 10,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": null
+    },
+    {
+      "model": "minimax-m27",
+      "model_display": "MiniMax M2.7",
+      "advertised_as": "minimax-m2.7",
+      "modality": "text",
+      "free": true,
+      "input_usd_per_m": 0,
+      "cached_input_usd_per_m": null,
+      "output_usd_per_m": 0,
+      "image_usd": null,
+      "video_usd_per_second": null,
+      "video_usd_per_video": null,
+      "usd_per_request": null,
+      "usd_per_1m_chars": null,
+      "save_pct": 100
+    }
+  ]
+}
