@@ -482,6 +482,7 @@ main > section.hero.hero--centred {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px 14px;
+    margin-bottom: var(--s-6);
   }
   .stats-kpis > .kpi-cell {
     grid-column: auto;
@@ -492,6 +493,17 @@ main > section.hero.hero--centred {
   }
   .kpi-cell__label {
     font-size: 13px;
+  }
+  .sellers-pair {
+    margin-top: var(--s-5);
+    row-gap: var(--s-4);
+  }
+  .seller-row {
+    padding: 16px;
+    gap: 10px;
+  }
+  .stats-foot {
+    margin-top: var(--s-5);
   }
 }
 
@@ -509,7 +521,7 @@ main > section.hero.hero--centred {
 }
 @media (max-width: 639px) {
   .chart-svg-wrap {
-    height: 290px;
+    height: 340px;
   }
 }
 .chart-svg-wrap svg {
@@ -1772,5 +1784,17 @@ main > section.section:is(.bg-band, .bg-mist) {
 @media (max-width: 639px) {
   .hero-emblem { width: 72px; height: 72px; }
 }
-/* Round 2 gate fix: attribution line sits on a solid panel so it reads over the ground effect */
-.stats-foot { position: relative; z-index: 1; background: var(--bg, #f5f0e6); box-shadow: 0 0 0 10px var(--bg, #f5f0e6); border-radius: 2px; }
+/* High-contrast attribution lines (WCAG AAA on sand/surface/statement grounds) */
+.stats-foot {
+  background: var(--bg, #f5f0e6);
+  color: var(--ink, #1f1916);
+}
+.footer--statement .footer__legal {
+  color: var(--ink);
+}
+.footer--statement .footer__legal a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--ink) 50%, transparent);
+  text-underline-offset: 3px;
+}
