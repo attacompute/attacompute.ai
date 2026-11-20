@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en" data-type="software" data-radius="soft" data-ground="sand" data-buttons="solid" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>attacompute: AI inference peer on AntSeed from Texas</title>
+<meta name="description" content="Independent AI inference provider on the AntSeed peer-to-peer network, operated from Texas with Phala TEE attestation and pay-per-request USDC pricing.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="attacompute: AI inference peer on AntSeed from Texas">
+<meta property="og:description" content="Pay per request in USDC on AntSeed. Verified domain, Phala TEE attestation, and live models from Texas.">
+<meta property="og:image" content="assets/brand/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<meta name="theme-color" content="#f5f0e6">
+<link rel="canonical" href="https://attacompute.ai/">
+<meta name="site-kind" content="software">
+<meta name="page-type" content="software">
+<link rel="preload" href="assets/fonts/funnel-display-400-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/funnel-sans-400-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #f5f0e6; --p-surface: #ebe3d5; --p-ink: #1f1916; --p-muted: #68625d;
+  --p-accent: #a84832; --p-accent-ink: #f5f0e6; --p-action: #a84832; --p-action-ink: #f5f0e6;
+  --p-inv-bg: #1f1916; --p-inv-surface: #2b2522; --p-inv-ink: #f5f0e6; --p-inv-muted: #9c968f;
+  --p-inv-accent: #a84832; --p-inv-accent-ink: #f5f0e6; --p-inv-action: #a84832; --p-inv-action-ink: #f5f0e6;
+  --font-display: "Funnel Display", system-ui, sans-serif;
+  --font-text: "Funnel Sans", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display-weight: 400;
+  --display-tracking: -0.03em;
+  --display-tracking-xl: -0.04em;
+  --ly-scale: 0.98;
+}
+</style>
+<link rel="stylesheet" href="assets/site/site.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script src="assets/backgrounds/backgrounds.js"></script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/liquid-type/moment.js">
+</head>
+<body>
+<!-- type: software
+     deal: hero centred, nav nav-mega, close close-type, footer footer-statement, rhythm surface-pairs, buttons solid, mark client-svg, ground sand, effect gradient-mesh, backgrounds plain/surface/surface/plain/bg-band/bg-mist
+     palette: brand rust #a84832 on Texas cream #f5f0e6 with warm sandstone #ebe3d5 and turquoise #2a7f7e accent (matches client's rust-and-cream ant identity)
+     moments: liquid-type (#trust) -->
+
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <a class="nav__logo" href="#top">
+      <img class="nav__logo-img" src="assets/brand/logo-mark.svg" alt="" width="32" height="32">attacompute
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item">
+        <a class="nav__link" href="#stats">Network <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <div class="menu-col span-3">
+              <p class="t-label">Telemetry</p>
+              <a href="#stats">On-chain stats<span>Lifetime USDC, settles, daily chart</span></a>
+              <a href="#models">Models and prices<span>Live per-token rates and IDs</span></a>
+              <a href="#trust">Trust and TEE<span>Phala attestation, domain, GitHub</span></a>
+            </div>
+            <div class="menu-col span-3">
+              <p class="t-label">Start using</p>
+              <a href="#download">AntSeed Desktop<span>macOS, Windows, and Linux builds</span></a>
+              <a href="connect/">Connect guide<span>Desktop, CLI, and OpenAI SDK setup</span></a>
+              <a href="#faq">Common questions<span>Billing, TEE, and data handling</span></a>
+            </div>
+            <a class="menu-card span-4 start-9" href="connect/">
+              <span class="t-card">Pin attacompute in one command</span>
+              <span class="t-small muted">Connect AntSeed Desktop or @antseed/cli directly to our Texas Phala TEE peer.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="#stats">Stats</a></div>
+      <div class="nav__item"><a class="nav__link" href="#models">Models</a></div>
+      <div class="nav__item"><a class="nav__link" href="connect/">Connect</a></div>
+      <div class="nav__item"><a class="nav__link" href="#faq">FAQ</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="#download">Download AntSeed Desktop</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- SCREEN 1: HERO (centred, 1H) -->
+  <section class="hero hero--centred" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__c">
+        <a class="pill" href="#trust"><span class="hero-dot" aria-hidden="true"></span><span>Phala TEE verified</span><span class="muted">Operated from Texas</span></a>
+        <h1 id="hero-h" aria-label="AI inference peer in Texas"><span class="hero-brand-mark" aria-hidden="true"><img src="assets/brand/logo-mark.svg" alt="" width="64" height="64" fetchpriority="high"></span>AI inference peer in Texas</h1>
+        <p class="hero__lead">Pay per request in USDC on the AntSeed network. Verified domain, Phala TEE attestation, and 13 live models starting at $0.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#download">Download AntSeed Desktop<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="#models">See models &amp; prices</a>
+        </div>
+      </div>
+      <div class="hero__window" data-fx="gradient-mesh" data-fx-seed="14" data-fx-palette='{"bg":"#d9ccb7","surface":"#e9e0d2","ink":"#2a2622","accent":"#a84832"}' role="img" aria-label="AntSeed Desktop routing an inference request to attacompute's Texas Phala TEE peer and settling in USDC">
+        <div class="ly-piece d-win d-win--dark" aria-hidden="true">
+          <div class="d-win__bar">
+            <span class="d-win__dots"><i></i><i></i><i></i></span>
+            <span><b>AntSeed Gateway</b> · localhost:8379/v1</span>
+            <span class="sp"></span>
+            <span>Peer 6c8044f5…fa139 · Phala TEE</span>
+          </div>
+          <div class="d-win__body">
+            <div class="peer-list">
+              <div class="peer-list__head"><span>ADVERTISED MODELS</span><span>IN / 1M</span></div>
+              <div class="peer-item is-on"><b>Claude Sonnet 5.5</b><span class="price">$1.90</span><code>claude-sonnet-5.5</code></div>
+              <div class="peer-item"><b>GPT-6.1 Sol</b><span class="price">$1.18</span><code>gpt-6.1-sol</code></div>
+              <div class="peer-item"><b>MiniMax M2.7</b><span class="price price--free">Free</span><code>minimax-m2.7</code></div>
+            </div>
+            <div class="req-pane" data-ly-steps="900">
+              <div class="req-line">POST /v1/chat/completions · model: 6c8044f5…fa139@claude-sonnet-5.5</div>
+              <div class="req-trace" data-step><span>Phala TEE attestation passed</span><span>·</span><span>Base USDC channel open</span></div>
+              <div class="req-reply" data-step>Streaming response from Texas peer. Usage metered per request with zero subscription.<small>Settled · $0.0042 USDC</small></div>
+              <div class="req-badges" data-step><span>Private · TEE</span><span>OpenAI &amp; Anthropic API</span><span>Zero account</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- SCREEN 2: LIVE STATS + HISTORICAL CHART (1H desktop, 2H phone) -->
+  <section class="section" id="stats" style="--h: 1; --hm: 2" aria-labelledby="stats-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="stats-h">Live settlement ledger from AntSeedStats</h2>
+        <p class="sec-lede">Combined totals across original and Phala TEE sellers. Gross USDC before protocol fees, never net profit.<span class="sec-lede__meta" data-updated-label>Snapshot loaded</span></p>
+      </div>
+
+      <div class="grid stats-kpis">
+        <div class="span-3 kpi-cell">
+          <p class="t-stat" data-stat="total-usdc">$683.70</p>
+          <p class="kpi-cell__label">Combined gross USDC</p>
+        </div>
+        <div class="span-3 kpi-cell">
+          <p class="t-stat" data-stat="total-settles">4,073</p>
+          <p class="kpi-cell__label">On-chain settles</p>
+        </div>
+        <div class="span-3 kpi-cell">
+          <p class="t-stat" data-stat="total-tokens">1.71B</p>
+          <p class="kpi-cell__label">Recorded tokens served</p>
+        </div>
+        <div class="span-3 kpi-cell">
+          <p class="t-stat" data-stat="total-buyers">237</p>
+          <p class="kpi-cell__label">Buyer counts summed</p>
+        </div>
+      </div>
+
+      <div class="frame chart-box" data-visual>
+        <div class="chart-svg-wrap" id="daily-chart"></div>
+      </div>
+
+      <div class="grid sellers-pair">
+        <div class="span-6 seller-row">
+          <div class="seller-row__head">
+            <h3>Phala TEE inference peer</h3>
+            <span class="seller-tag" data-seller="cur-tee">Phala TEE verified</span>
+          </div>
+          <div class="seller-row__metrics">
+            <div><strong data-seller="cur-usdc">$22.85</strong> <span>gross USDC</span></div>
+            <div><strong data-seller="cur-settles">74</strong> <span>settles</span></div>
+            <div><strong data-seller="cur-buyers">6</strong> <span>buyers</span></div>
+            <div><strong data-seller="cur-rank">#87</strong> <span>rank</span></div>
+          </div>
+          <div class="seller-row__foot">
+            <code class="seller-addr">0x6c8044f5e6fb2ad70dd31fd7a20fae05a73fa139</code>
+            <a class="link" href="https://antseedstats.com/sellers/0x6c8044f5e6fb2ad70dd31fd7a20fae05a73fa139" target="_blank" rel="noopener noreferrer">Inspect on AntSeedStats</a>
+          </div>
+        </div>
+        <div class="span-6 seller-row">
+          <div class="seller-row__head">
+            <h3>Original inference peer</h3>
+            <span class="seller-tag seller-tag--orig">History since May 2026</span>
+          </div>
+          <div class="seller-row__metrics">
+            <div><strong data-seller="orig-usdc">$660.85</strong> <span>gross USDC</span></div>
+            <div><strong data-seller="orig-settles">3,999</strong> <span>settles</span></div>
+            <div><strong data-seller="orig-buyers">231</strong> <span>buyers</span></div>
+            <div><strong data-seller="orig-rank">#30</strong> <span>rank</span></div>
+          </div>
+          <div class="seller-row__foot">
+            <code class="seller-addr">0xd5e7d5950b6cc71c095da4ace0c0cb8495667be0</code>
+            <a class="link" href="https://antseedstats.com/sellers/0xd5e7d5950b6cc71c095da4ace0c0cb8495667be0" target="_blank" rel="noopener noreferrer">Inspect on AntSeedStats</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-foot">
+        <span id="chart-readout">Hover any daily bar to inspect settled USDC and settle counts.</span>
+        <span>Data: <a class="link" href="https://antseedstats.com" target="_blank" rel="noopener noreferrer">AntSeedStats (antseedstats.com)</a>, CC BY 4.0</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN 3: LIVE MODELS & PRICES (.ground-surface, 1H desktop, 2H phone) -->
+  <section class="section ground-surface" id="models" style="--h: 1; --hm: 2" aria-labelledby="models-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="models-h">Live models and per-token prices</h2>
+        <p class="sec-lede">Advertised by our active Phala TEE peer. Copy any model ID to pin requests to attacompute.<span class="sec-lede__meta"><span data-stat="model-count">13</span> models · <span data-updated-label>Snapshot loaded</span></span></p>
+      </div>
+
+      <div class="frame price-spectrum" data-visual>
+        <svg viewBox="0 0 1120 44" role="img" aria-label="Input price distribution across 13 advertised models from $0 free tier to $9.50 per million tokens, with savings up to 41 percent">
+          <text x="0" y="12" fill="#1f1916" font-family="Funnel Sans, system-ui, sans-serif" font-size="12" font-weight="500">Input rate band (USDC / 1M tokens)</text>
+          <text x="1120" y="12" text-anchor="end" fill="#164b4a" font-family="DM Mono, monospace" font-size="11.5">$0 Free · $0.30–$1.90 core tier · Save up to 41%</text>
+          <rect x="0" y="22" width="1120" height="12" rx="6" fill="#ebe3d5"/>
+          <rect x="0" y="22" width="110" height="12" rx="6" fill="#2a7f7e"/>
+          <rect x="118" y="22" width="460" height="12" rx="6" fill="#a84832"/>
+          <rect x="586" y="22" width="320" height="12" rx="6" fill="#c8643c"/>
+          <rect x="914" y="22" width="206" height="12" rx="6" fill="#432a1f"/>
+        </svg>
+      </div>
+
+      <div class="models-controls">
+        <div class="models-search">
+          <label for="model-search">Search models or request IDs</label>
+          <input id="model-search" type="search" autocomplete="off" placeholder="claude-sonnet-5.5, gpt-6, minimax...">
+        </div>
+        <div class="filter-group" role="group" aria-label="Filter models by modality">
+          <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All <span class="filter-btn__count">13</span></button>
+          <button type="button" class="filter-btn" data-filter="text" aria-pressed="false">Text <span class="filter-btn__count">13</span></button>
+          <button type="button" class="filter-btn" data-filter="image" aria-pressed="false">Image <span class="filter-btn__count">0</span></button>
+          <button type="button" class="filter-btn" data-filter="video" aria-pressed="false">Video <span class="filter-btn__count">0</span></button>
+          <button type="button" class="filter-btn" data-filter="free" aria-pressed="false">Free <span class="filter-btn__count">1</span></button>
+        </div>
+      </div>
+
+      <div tabindex="0" role="region" aria-labelledby="models-table-caption" class="models-table-wrap">
+        <table class="models-table" id="models-table">
+          <caption id="models-table-caption" class="visually-hidden">Advertised models and USDC prices per million tokens on attacompute</caption>
+          <thead>
+            <tr>
+              <th scope="col" data-type="text">
+                <button type="button" commandfor="models-table" command="--sort">Model &amp; request ID <svg class="sort-ind" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.5v7M3 6.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </th>
+              <th scope="col" data-type="text">
+                <button type="button" commandfor="models-table" command="--sort">Modality <svg class="sort-ind" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.5v7M3 6.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </th>
+              <th scope="col" data-type="number" aria-sort="ascending">
+                <button type="button" commandfor="models-table" command="--sort">Input / 1M <svg class="sort-ind" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.5v7M3 6.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </th>
+              <th scope="col" data-type="number">
+                <button type="button" commandfor="models-table" command="--sort">Cached / 1M <svg class="sort-ind" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.5v7M3 6.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </th>
+              <th scope="col" data-type="number">
+                <button type="button" commandfor="models-table" command="--sort">Output / 1M <svg class="sort-ind" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.5v7M3 6.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </th>
+              <th scope="col" data-type="number">
+                <button type="button" commandfor="models-table" command="--sort">Savings <svg class="sort-ind" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2.5v7M3 6.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="models-tbody">
+            <tr data-modality="text" data-free="1" data-search="minimax m2.7 minimax-m2.7 text free">
+              <th scope="row" data-value="MiniMax M2.7"><div class="model-cell"><span class="model-name">MiniMax M2.7</span><span class="model-id-row"><code class="model-id-code">minimax-m2.7</code></span></div></th>
+              <td data-value="free text"><span class="mod-badge mod-badge--free">text · Free</span></td>
+              <td class="num" data-value="0">Free</td>
+              <td class="num" data-value="0">Free</td>
+              <td class="num" data-value="0">Free</td>
+              <td class="num" data-value="100"><span class="save-pill">-100%</span></td>
+            </tr>
+            <tr data-modality="text" data-free="0" data-search="gemini 3 flash preview gemini-3-flash-preview text">
+              <th scope="row" data-value="Gemini 3 Flash Preview"><div class="model-cell"><span class="model-name">Gemini 3 Flash Preview</span><span class="model-id-row"><code class="model-id-code">gemini-3-flash-preview</code></span></div></th>
+              <td data-value="text"><span class="mod-badge">text</span></td>
+              <td class="num" data-value="0.295">$0.295</td>
+              <td class="num" data-value="0.0295">$0.0295</td>
+              <td class="num" data-value="1.77">$1.77</td>
+              <td class="num" data-value="41"><span class="save-pill">-41%</span></td>
+            </tr>
+            <tr data-modality="text" data-free="0" data-search="gpt-6.1 sol gpt-6.1-sol text">
+              <th scope="row" data-value="GPT-6.1 Sol"><div class="model-cell"><span class="model-name">GPT-6.1 Sol</span><span class="model-id-row"><code class="model-id-code">gpt-6.1-sol</code></span></div></th>
+              <td data-value="text"><span class="mod-badge">text</span></td>
+              <td class="num" data-value="1.18">$1.18</td>
+              <td class="num" data-value="0.059">$0.059</td>
+              <td class="num" data-value="5.9">$5.90</td>
+              <td class="num" data-value="41"><span class="save-pill">-41%</span></td>
+            </tr>
+            <tr data-modality="text" data-free="0" data-search="claude sonnet 5.5 claude-sonnet-5.5 text">
+              <th scope="row" data-value="Claude Sonnet 5.5"><div class="model-cell"><span class="model-name">Claude Sonnet 5.5</span><span class="model-id-row"><code class="model-id-code">claude-sonnet-5.5</code></span></div></th>
+              <td data-value="text"><span class="mod-badge">text</span></td>
+              <td class="num" data-value="1.9">$1.90</td>
+              <td class="num" data-value="0.095">$0.095</td>
+              <td class="num" data-value="9.5">$9.50</td>
+              <td class="num" data-value="5"><span class="save-pill">-5%</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="models-foot">
+        <span id="models-status" role="status">Showing advertised models from AntSeedStats</span>
+        <button type="button" class="link models-more-btn" id="models-more-btn" hidden>Show all 13 models</button>
+        <span id="models-sort-status" class="visually-hidden" role="status"></span>
+        <span>Data: <a class="link" href="https://antseedstats.com/sellers/0x6c8044f5e6fb2ad70dd31fd7a20fae05a73fa139" target="_blank" rel="noopener noreferrer">AntSeedStats</a>, CC BY 4.0</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN 4: DOWNLOAD ANTSEED DESKTOP + REQUEST FLOW DIAGRAM (.ground-surface, 1H desktop & phone) -->
+  <section class="section ground-surface" id="download" style="--h: 1; --hm: 1" aria-labelledby="download-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="download-h">Download AntSeed Desktop</h2>
+      </div>
+      <div class="grid grid--top">
+        <div class="span-6">
+          <p class="os-detected-note" id="download-detected-note">Select the installer for your operating system. AntSeed Desktop runs a local gateway on port 8379 and connects your AI apps.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" id="download-detected-btn" href="https://download.antseed.com/vpr/mac-arm64">
+              <span data-os-label>Download for macOS (Apple silicon)</span>
+              <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg>
+            </a>
+          </div>
+          <div class="os-grid" aria-label="Direct platform downloads">
+            <a class="os-link" data-os-key="mac-arm64" href="https://download.antseed.com/vpr/mac-arm64">
+              <span class="os-link__left"><img src="assets/icons/apple.svg" alt="" width="18" height="18" loading="lazy">macOS Apple silicon</span>
+              <span class="os-link__arch">arm64</span>
+            </a>
+            <a class="os-link" data-os-key="mac-x64" href="https://download.antseed.com/vpr/mac-x64">
+              <span class="os-link__left"><img src="assets/icons/apple.svg" alt="" width="18" height="18" loading="lazy">macOS Intel</span>
+              <span class="os-link__arch">x64</span>
+            </a>
+            <a class="os-link" data-os-key="win-x64" href="https://download.antseed.com/vpr/win-x64">
+              <span class="os-link__left"><img src="assets/icons/windows.svg" alt="" width="18" height="18" loading="lazy">Windows</span>
+              <span class="os-link__arch">x64</span>
+            </a>
+            <a class="os-link" data-os-key="linux-x64" href="https://download.antseed.com/vpr/linux-x64">
+              <span class="os-link__left"><img src="assets/icons/linux-tux.svg" alt="" width="18" height="18" loading="lazy">Linux x64</span>
+              <span class="os-link__arch">x64</span>
+            </a>
+            <a class="os-link" data-os-key="linux-arm64" href="https://download.antseed.com/vpr/linux-arm64">
+              <span class="os-link__left"><img src="assets/icons/linux-tux.svg" alt="" width="18" height="18" loading="lazy">Linux arm64</span>
+              <span class="os-link__arch">arm64</span>
+            </a>
+            <a class="os-link" href="https://github.com/AntSeed/antseed/releases" target="_blank" rel="noopener noreferrer">
+              <span class="os-link__left"><img src="assets/icons/github.svg" alt="" width="18" height="18" loading="lazy">All GitHub releases</span>
+              <span class="os-link__arch">git</span>
+            </a>
+          </div>
+          <div class="os-extra-links">
+            <a class="link" href="https://antseed.com/docs/desktop/" target="_blank" rel="noopener noreferrer">AntSeed Desktop docs</a>
+            <a class="link" href="connect/">CLI &amp; SDK setup guide</a>
+          </div>
+        </div>
+
+        <div class="span-6 start-7">
+          <div class="panel download-visual" data-visual>
+            <svg viewBox="0 0 560 340" role="img" aria-label="Architecture diagram showing AntSeed Desktop and local gateway on port 8379 connecting OpenAI, Anthropic, Python, and Node.js clients to attacompute's Phala TEE peer in Texas">
+              <circle cx="280" cy="170" r="144" fill="none" stroke="#1f1916" stroke-opacity="0.08" stroke-dasharray="4 4"/>
+              <circle cx="280" cy="170" r="96" fill="none" stroke="#a84832" stroke-opacity="0.16"/>
+              <line x1="116" y1="84" x2="226" y2="148" stroke="#a84832" stroke-width="1.6" stroke-opacity="0.55"/>
+              <line x1="444" y1="84" x2="334" y2="148" stroke="#2a7f7e" stroke-width="1.6" stroke-opacity="0.6"/>
+              <line x1="116" y1="256" x2="226" y2="192" stroke="#2a7f7e" stroke-width="1.6" stroke-opacity="0.6"/>
+              <line x1="444" y1="256" x2="334" y2="192" stroke="#a84832" stroke-width="1.6" stroke-opacity="0.55"/>
+
+              <g transform="translate(26 52)">
+                <rect width="150" height="58" rx="12" fill="#ebe3d5" stroke="#1f1916" stroke-opacity="0.14"/>
+                <text x="16" y="25" fill="#1f1916" font-family="Funnel Sans, system-ui, sans-serif" font-size="14" font-weight="500">OpenAI API</text>
+                <text x="16" y="44" fill="#68625d" font-family="DM Mono, monospace" font-size="11.5">/v1/chat/completions</text>
+              </g>
+              <g transform="translate(384 52)">
+                <rect width="150" height="58" rx="12" fill="#ebe3d5" stroke="#1f1916" stroke-opacity="0.14"/>
+                <text x="16" y="25" fill="#1f1916" font-family="Funnel Sans, system-ui, sans-serif" font-size="14" font-weight="500">Anthropic API</text>
+                <text x="16" y="44" fill="#68625d" font-family="DM Mono, monospace" font-size="11.5">/v1/messages</text>
+              </g>
+              <g transform="translate(26 230)">
+                <rect width="150" height="58" rx="12" fill="#ebe3d5" stroke="#1f1916" stroke-opacity="0.14"/>
+                <text x="16" y="25" fill="#1f1916" font-family="Funnel Sans, system-ui, sans-serif" font-size="14" font-weight="500">Local Gateway</text>
+                <text x="16" y="44" fill="#68625d" font-family="DM Mono, monospace" font-size="11.5">127.0.0.1:8379</text>
+              </g>
+              <g transform="translate(384 230)">
+                <rect width="150" height="58" rx="12" fill="#ebe3d5" stroke="#1f1916" stroke-opacity="0.14"/>
+                <text x="16" y="25" fill="#1f1916" font-family="Funnel Sans, system-ui, sans-serif" font-size="14" font-weight="500">USDC on Base</text>
+                <text x="16" y="44" fill="#164b4a" font-family="DM Mono, monospace" font-size="11.5">Per-request settle</text>
+              </g>
+
+              <g transform="translate(194 126)">
+                <rect width="172" height="88" rx="16" fill="#1f1916"/>
+                <text x="86" y="34" text-anchor="middle" fill="#f5f0e6" font-family="Funnel Display, system-ui, sans-serif" font-size="18" font-weight="500">attacompute</text>
+                <text x="86" y="55" text-anchor="middle" fill="#8ad6d4" font-family="DM Mono, monospace" font-size="11.5">Phala TEE · Texas</text>
+                <text x="86" y="74" text-anchor="middle" fill="#d9b89c" font-family="DM Mono, monospace" font-size="10.5">6c8044f5…fa139</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN 5: HOW TO CONNECT (1H desktop, 2H phone) -->
+  <section class="section" id="connect" style="--h: 1; --hm: 2" aria-labelledby="connect-h">
+    <div class="wrap">
+      <div class="section-head--split">
+        <div>
+          <h2 id="connect-h">Connect with AntSeed Desktop or CLI</h2>
+          <p class="t-lead">Run the buyer locally and pin our Phala TEE peer address in under two minutes.</p>
+        </div>
+        <a class="link" href="connect/">Open the full connect guide</a>
+      </div>
+
+      <div class="grid">
+        <article class="card card--row span-6">
+          <h3>AntSeed Desktop setup</h3>
+          <p>Best for interactive chat and connecting local editors without managing CLI processes.</p>
+          <ol class="connect-steps">
+            <li><span>Install AntSeed Desktop and open the app to start the local gateway.</span></li>
+            <li><span>Fund with USDC on Base (or card checkout). Free models need $0.</span></li>
+            <li><span>Turn on Private mode and pick attacompute (<code>6c8044f5…fa139</code>).</span></li>
+          </ol>
+          <div class="card-foot-link"><a class="link" href="connect/#desktop">Read Desktop setup steps</a></div>
+          <div class="panel connect-panel" data-visual data-fx="grain-gradient" data-fx-seed="21" data-fx-palette='{"bg":"#cdd6c6","surface":"#dce3d6","ink":"#262d24","accent":"#2a7f7e"}' data-fx-params='{"speed":0,"grainMotion":0}' role="img" aria-label="AntSeed Desktop routing panel pinned to attacompute Phala TEE">
+            <div class="connect-panel__card" aria-hidden="true">
+              <div class="connect-panel__row"><span>Routing mode</span><span class="connect-panel__tag">Private · Phala TEE</span></div>
+              <div class="connect-panel__row"><span>Pinned peer</span><span>6c8044f5…fa139</span></div>
+              <div class="connect-panel__row"><span>Settlement</span><span>Base USDC · Per request</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card--row span-6">
+          <h3>AntSeed CLI &amp; OpenAI SDK setup</h3>
+          <p>Start the buyer proxy on port 8377 or gateway on port 8379 and pin our peer ID.</p>
+          <div class="card-foot-link"><a class="link" href="connect/">See Gateway &amp; Python SDK examples</a></div>
+          <div class="panel connect-panel--cli" data-visual data-fx="grain-gradient" data-fx-seed="33" data-fx-palette='{"bg":"#d9ccb7","surface":"#e9e0d2","ink":"#2a2622","accent":"#a8794a"}' data-fx-params='{"speed":0,"grainMotion":0}'>
+            <div class="code-terminal" role="region" aria-label="AntSeed CLI terminal setup commands">
+              <div class="code-terminal__bar" aria-hidden="true"><span class="d-win__dots"><i></i><i></i><i></i></span><span>Terminal · @antseed/cli</span></div>
+              <div class="code-stack">
+                <div class="code-block">
+                  <pre tabindex="0"><code id="cmd-install">npm install -g @antseed/cli</code></pre>
+                  <span class="copy-wrap">
+                    <button type="button" class="copy-btn" command="--copy" commandfor="cmd-install" aria-label="Copy npm install command">
+                      <svg class="ic-copy" viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3.5 10.5H3A1.5 1.5 0 0 1 1.5 9V3A1.5 1.5 0 0 1 3 1.5h6A1.5 1.5 0 0 1 10.5 3v.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+                      <svg class="ic-check" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5 6.5 11.5 13 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="copy-tip" role="status"></span>
+                  </span>
+                </div>
+                <div class="code-block">
+                  <pre tabindex="0"><code id="cmd-buyer">antseed buyer start
+antseed buyer connection set --peer 6c8044f5e6fb2ad70dd31fd7a20fae05a73fa139</code></pre>
+                  <span class="copy-wrap">
+                    <button type="button" class="copy-btn" command="--copy" commandfor="cmd-buyer" aria-label="Copy buyer start and peer pin commands">
+                      <svg class="ic-copy" viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3.5 10.5H3A1.5 1.5 0 0 1 1.5 9V3A1.5 1.5 0 0 1 3 1.5h6A1.5 1.5 0 0 1 10.5 3v.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+                      <svg class="ic-check" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5 6.5 11.5 13 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="copy-tip" role="status"></span>
+                  </span>
+                </div>
+                <div class="code-block">
+                  <pre tabindex="0"><code id="cmd-env">export OPENAI_BASE_URL="http://localhost:8377/v1"
+export OPENAI_API_KEY="antseed"</code></pre>
+                  <span class="copy-wrap">
+                    <button type="button" class="copy-btn" command="--copy" commandfor="cmd-env" aria-label="Copy OpenAI base URL environment variables">
+                      <svg class="ic-copy" viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3.5 10.5H3A1.5 1.5 0 0 1 1.5 9V3A1.5 1.5 0 0 1 3 1.5h6A1.5 1.5 0 0 1 10.5 3v.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+                      <svg class="ic-check" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5 6.5 11.5 13 4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <span class="copy-tip" role="status"></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN 6: TRUST, VERIFICATION & BRAND LINE (bg-band + liquid-type moment, 1H desktop, 2H phone) -->
+  <section class="section bg-band" id="trust" style="--h: 1; --hm: 2" aria-labelledby="trust-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="trust-h" class="trust-statement mo-lt__type" data-moment="liquid-type" data-moment-opts='{"strength": 0.9}'>Compute, cultivated.</h2>
+        <p class="t-lead">Domain verified, GitHub verified, and Phala TEE attested on AntSeedStats.</p>
+      </div>
+
+      <div class="grid trust-cards">
+        <article class="card trust-card span-4">
+          <span class="trust-card__kicker">Phala TEE</span>
+          <h3>Phala TEE hardware attestation</h3>
+          <p>Active peer <code>0x6c8044f5…fa139</code> advertises Phala TEE attestation verified by AntSeed buyers in Private mode.</p>
+          <a class="link" href="https://antseedstats.com/sellers/0x6c8044f5e6fb2ad70dd31fd7a20fae05a73fa139" target="_blank" rel="noopener noreferrer">View TEE seller profile</a>
+        </article>
+
+        <article class="card trust-card span-4">
+          <span class="trust-card__kicker">Verified identity</span>
+          <h3>Domain and GitHub verification</h3>
+          <p>Both attacompute seller addresses carry verified domain and GitHub proofs indexed publicly on AntSeedStats.</p>
+          <a class="link" href="https://antseedstats.com/sellers/0xd5e7d5950b6cc71c095da4ace0c0cb8495667be0" target="_blank" rel="noopener noreferrer">View original seller profile</a>
+        </article>
+
+        <article class="card trust-card span-4">
+          <span class="trust-card__kicker">Public ledger</span>
+          <h3>On-chain Base USDC history</h3>
+          <p>Every USDC payment channel settle since May 2026 is recorded on Base and indexed as organic traffic on AntSeedStats.</p>
+          <a class="link" href="https://antseedstats.com/developers" target="_blank" rel="noopener noreferrer">Check AntSeedStats API</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN 7: FAQ (bg-mist, 6/6 split matching #download: open FAQ left, Texan verification panel right) -->
+  <section class="section bg-mist" id="faq" style="--h: 1; --hm: 2" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="faq-h">Common questions</h2>
+        <p class="sec-lede">Plain answers on USDC billing, Phala TEE verification, and request privacy.</p>
+      </div>
+      <div class="grid grid--top faq-split">
+        <div class="faq faq-list span-6">
+          <div class="faq-item">
+            <h3>How do USDC inference prices work?</h3>
+            <p>Fund your AntSeed wallet with USDC on Base or card checkout in Desktop. Usage is metered per request with zero subscription, and free models work with $0.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Why are two attacompute seller addresses listed?</h3>
+            <p>Our original peer ran from May 2026; on Nov 18, 2026 active inference moved to our Phala TEE peer. Both histories are stitched in the chart above.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Are AntSeedStats USDC totals operator profit?</h3>
+            <p>No. Displayed USDC figures are gross on-chain settled volume before protocol fees, reported directly by AntSeedStats.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Which OpenAI and Anthropic API clients work?</h3>
+            <p>Any OpenAI- or Anthropic-compatible client works against your local buyer (<code>:8377</code>) or local gateway (<code>:8379</code>).</p>
+          </div>
+          <div class="faq-item">
+            <h3>How does request privacy work?</h3>
+            <p>Private mode enforces Phala TEE attestation. Data needed to fulfill your request is processed by attacompute and the service providers involved; do not send sensitive info you do not want processed.</p>
+          </div>
+        </div>
+        <div class="span-6 start-7">
+          <div class="panel faq-visual" data-visual>
+            <img class="faq-visual__mark" src="assets/brand/logo-mark.svg" alt="attacompute Texan ant emblem wearing a cowboy hat and turquoise Texas star bolo tie" width="156" height="156" loading="lazy">
+            <svg class="faq-visual__svg" viewBox="0 0 420 132" role="img" aria-label="Verification summary for attacompute Texas peer">
+              <rect x="1" y="1" width="418" height="130" rx="12" fill="#f5f0e6" stroke="#1f1916" stroke-opacity="0.14"/>
+              <text x="20" y="30" fill="#1f1916" font-family="Funnel Sans, system-ui, sans-serif" font-size="14" font-weight="500">Independent Texas operator</text>
+              <text x="400" y="30" text-anchor="end" fill="#164b4a" font-family="DM Mono, monospace" font-size="12">Phala TEE verified</text>
+              <line x1="20" y1="46" x2="400" y2="46" stroke="#1f1916" stroke-opacity="0.12"/>
+              <text x="20" y="72" fill="#68625d" font-family="DM Mono, monospace" font-size="12">Active peer</text>
+              <text x="400" y="72" text-anchor="end" fill="#1f1916" font-family="DM Mono, monospace" font-size="12">0x6c8044f5…fa139</text>
+              <text x="20" y="96" fill="#68625d" font-family="DM Mono, monospace" font-size="12">Proofs</text>
+              <text x="400" y="96" text-anchor="end" fill="#1f1916" font-family="DM Mono, monospace" font-size="12">Domain · GitHub · TEE</text>
+              <text x="20" y="118" fill="#68625d" font-family="DM Mono, monospace" font-size="12">Settlement</text>
+              <text x="400" y="118" text-anchor="end" fill="#1f1916" font-family="DM Mono, monospace" font-size="12">USDC on Base · CC BY 4.0</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- SCREEN 8: CLOSING + FOOTER (close-type + footer-statement, 1H desktop, 2H phone) -->
+<footer class="footer closing footer--statement" id="contact" style="--h: 1; --hm: 2" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">Start routing inference through Texas</h2>
+        <p>Install AntSeed Desktop, fund in USDC on Base, or try a free model immediately.</p>
+      </div>
+      <a class="btn btn--primary btn--xl btn--wide" href="#download">Download AntSeed Desktop<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><img class="nav__logo-img" src="assets/brand/logo-mark.svg" alt="" width="32" height="32" loading="lazy">attacompute</a>
+          <p class="footer__lede">Independent AI inference provider on AntSeed, operated from Texas. Independent operator. Not affiliated with the AntSeed Foundation.</p>
+        </div>
+        <div class="span-2 footer__col">
+          <h3>Site</h3>
+          <ul>
+            <li><a href="#stats">Live stats</a></li>
+            <li><a href="#models">Models &amp; prices</a></li>
+            <li><a href="#trust">Trust &amp; TEE</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="span-2 footer__col">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#download">AntSeed Desktop</a></li>
+            <li><a href="connect/">Connect guide</a></li>
+            <li><a href="https://antseed.com/docs/quickstart/" target="_blank" rel="noopener noreferrer">AntSeed Quickstart</a></li>
+            <li><a href="https://antseed.com/docs/gateway/" target="_blank" rel="noopener noreferrer">Gateway docs</a></li>
+          </ul>
+        </div>
+        <div class="span-2 footer__col">
+          <h3>AntSeedStats</h3>
+          <ul>
+            <li><a href="https://antseedstats.com/sellers/0x6c8044f5e6fb2ad70dd31fd7a20fae05a73fa139" target="_blank" rel="noopener noreferrer">Current TEE seller</a></li>
+            <li><a href="https://antseedstats.com/sellers/0xd5e7d5950b6cc71c095da4ace0c0cb8495667be0" target="_blank" rel="noopener noreferrer">Original seller</a></li>
+            <li><a href="https://antseedstats.com/developers" target="_blank" rel="noopener noreferrer">Public API</a></li>
+          </ul>
+        </div>
+        <div class="span-2 footer__col">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="https://x.com/AttaCompute" target="_blank" rel="noopener noreferrer">X (@AttaCompute)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <div class="footer__legal-links">
+          <span>&copy; 2026 attacompute</span>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <span>Data: <a href="https://antseedstats.com" target="_blank" rel="noopener noreferrer">AntSeedStats (antseedstats.com)</a>, CC BY 4.0</span>
+        </div>
+        <div class="socials">
+          <a href="https://x.com/AttaCompute" target="_blank" rel="noopener noreferrer" aria-label="attacompute on X">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Quick actions">
+  <a class="btn btn--primary" href="#download">Download AntSeed Desktop</a>
+</nav>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+<script type="module" src="assets/site/app.js"></script>
+</body>
+</html>
