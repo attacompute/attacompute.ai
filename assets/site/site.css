@@ -1484,3 +1484,12 @@ main > section.section:is(.bg-band, .bg-mist) {
     outline: 2px solid Highlight;
   }
 }
+
+/* Round 2 gate fix: keep the larger emblem while the hero still fits one screen */
+.hero-emblem { width: clamp(76px, 6.4vw, 96px); height: clamp(76px, 6.4vw, 96px); }
+.hero--centred .hero__window { min-height: clamp(200px, 27svh, 300px); }
+@media (max-width: 639px) {
+  .hero--centred .hero__window { min-height: 200px; }
+}
+/* Round 2 gate fix: attribution line sits on a solid panel so it reads over the ground effect */
+.stats-foot { position: relative; z-index: 1; background: var(--bg, #f5f0e6); box-shadow: 0 0 0 10px var(--bg, #f5f0e6); border-radius: 2px; }
