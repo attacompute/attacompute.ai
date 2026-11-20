@@ -7,7 +7,7 @@ Public website for **attacompute** — an independent AI inference provider (sel
 ## What is in this repo
 
 - Static HTML, CSS, and vanilla ES modules deployable directly to **Cloudflare Pages** with zero build server required.
-- Hand-crafted Texan ant SVG logo suite (`assets/brand/logo-mark.svg`, `assets/brand/logo-lockup.svg`, `favicon.svg`, PNG icons at 32/180/512, and 1200×630 OG image).
+- Raster logo suite derived from the original rust ant head mark (`assets/brand/logo-mark-{64,128,256,512}.{png,webp}`, `favicon.ico`, PNG favicons at 16/32/48, `apple-touch-icon.png` at 180, `icon-512.png`, and 1200×630 `og-image.png`).
 - Self-hosted fonts (`Funnel Display`, `Funnel Sans`, `DM Mono`) in `assets/fonts/` — no third-party font CDNs.
 - Live on-chain telemetry and advertised model pricing from the public [AntSeedStats API](https://antseedstats.com/developers) (CC BY 4.0), with `localStorage` caching, 5-minute background refresh, and a build-time fallback snapshot (`data/snapshot.json`).
 - Dedicated pages:
@@ -36,10 +36,11 @@ The site fetches live data client-side from `https://antseedstats.com/api/v1` an
 node scripts/snapshot.mjs
 ```
 
-To regenerate the PNG icon fallbacks and OG image from the SVG brand sources (requires local Google Chrome):
+To regenerate the transparent marks, favicons, app icons, and OG image from the original raster logo PNG (requires local Google Chrome for `og-image.png`):
 
 ```bash
-node scripts/render-brand-assets.mjs
+node scripts/render-brand-assets.mjs /path/to/original-logo.png
+# or: BRAND_SOURCE_PNG=/path/to/original-logo.png node scripts/render-brand-assets.mjs
 ```
 
 ## Public data sources

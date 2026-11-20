@@ -31,9 +31,12 @@ main p {
 }
 
 /* Brand mark in nav, hero, and footer */
-.nav__logo-img {
-  width: 34px;
-  height: 34px;
+.nav__logo picture {
+  display: contents;
+}
+.nav__logo .nav__logo-img {
+  width: 32px;
+  height: 32px;
   flex: none;
   display: block;
 }
@@ -43,6 +46,11 @@ main p {
   margin: 0 auto var(--s-2);
   display: grid;
   place-items: center;
+}
+.hero-emblem picture {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 .hero-emblem img {
   width: 100%;

@@ -13,9 +13,9 @@ Branch: `redesign/texan-site`
   - Secondary Texan turquoise `#2a7f7e` for verified TEE badges, free-model accents, and the active TEE seller series in the settlement chart
 - **Self-hosted typography (`funnel` pair + monospace)**:
   - `Funnel Display`, `Funnel Sans`, and `DM Mono` served as 4 subset `.woff2` files in `assets/fonts/` (52 KiB total, zero third-party font CDNs), preloaded with `crossorigin` in `<head>`.
-- **Texan Logo Refresh**:
-  - Built directly from `brand-source/profile.png`: preserves the rust-red (`#a84832`) ant head silhouette, sweeping angled antennae, and curved pincer mandibles, adding a cattleman-creased cowboy hat with turquoise hatband (`#2a7f7e`) and a dark-leather bolo tie with silver/turquoise Texas Lone Star concho.
-  - Exported across `assets/brand/logo-mark.svg`, `assets/brand/logo-lockup.svg`, `favicon.svg`, `assets/brand/favicon-32.png`, `assets/brand/apple-touch-icon.png`, `assets/brand/icon-512.png`, and `assets/brand/og-image.png` (1200×630) via `scripts/render-brand-assets.mjs`.
+- **Brand Mark (Original Ant)**:
+  - Generated faithfully from the original rust ant head raster (`#ae4b33` on cream) with a colour-distance alpha key so antialiased edges stay clean on every ground.
+  - Exported across `assets/brand/logo-mark-{64,128,256,512}.{png,webp}`, `favicon.ico`, `assets/brand/favicon-{16,32,48}.png`, `assets/brand/apple-touch-icon.png`, `assets/brand/icon-512.png`, and `assets/brand/og-image.png` (1200×630) via `scripts/render-brand-assets.mjs`.
 
 ## 2. Architecture & Live Data Pipeline
 
@@ -37,7 +37,7 @@ Branch: `redesign/texan-site`
 - **Classification**: `software` (`page-type="software"`, `site-kind="software"`).
 - **Deals**:
   - Hero: `centred` (`data-enter`) with live AntSeed Gateway preview frame on `gradient-mesh`.
-  - Structure: `nav-mega`, `footer-statement`, `close-type`, `surface-pairs`, `solid` buttons, client SVG mark.
+  - Structure: `nav-mega`, `footer-statement`, `close-type`, `surface-pairs`, `solid` buttons, client original ant mark.
   - Backgrounds: `plain`, `surface` (`#models`, `#download`), `plain` (`#connect` with baked `grain-gradient` still panels), `bg-band` (`#trust`), `bg-mist` (`#faq`).
   - Moment: `liquid-type` on `#trust` (`Compute, cultivated.`).
 - **Voice & Copy Lint**:

@@ -10,8 +10,10 @@
 <meta property="og:description" content="Pay per request in USDC on AntSeed. Verified domain, Phala TEE attestation, and live models from Texas.">
 <meta property="og:image" content="assets/brand/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/brand/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="assets/brand/favicon-48.png" sizes="48x48" type="image/png">
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <meta name="theme-color" content="#f5f0e6">
 <link rel="canonical" href="https://attacompute.ai/">
@@ -51,7 +53,7 @@
 </head>
 <body>
 <!-- type: software
-     deal: hero centred, nav nav-mega, close close-type, footer footer-statement, rhythm surface-pairs, buttons solid, mark client-svg, ground sand, effect gradient-mesh, backgrounds plain/surface/surface/plain/bg-band/bg-mist
+     deal: hero centred, nav nav-mega, close close-type, footer footer-statement, rhythm surface-pairs, buttons solid, mark client-raster, ground sand, effect gradient-mesh, backgrounds plain/surface/surface/plain/bg-band/bg-mist
      palette: brand rust #a84832 on Texas cream #f5f0e6 with warm sandstone #ebe3d5 and turquoise #2a7f7e accent (matches client's rust-and-cream ant identity)
      moments: liquid-type (#trust) -->
 
@@ -59,7 +61,10 @@
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
     <a class="nav__logo" href="#top">
-      <img class="nav__logo-img" src="assets/brand/logo-mark.svg" alt="" width="32" height="32">attacompute
+      <picture>
+        <source type="image/webp" srcset="assets/brand/logo-mark-64.webp 1x, assets/brand/logo-mark-128.webp 2x">
+        <img class="nav__logo-img" src="assets/brand/logo-mark-64.png" srcset="assets/brand/logo-mark-64.png 1x, assets/brand/logo-mark-128.png 2x" alt="" width="32" height="32">
+      </picture>attacompute
     </a>
     <nav class="nav__links" aria-label="Main">
       <div class="nav__item">
@@ -106,7 +111,10 @@
       <div class="hero__c">
         <a class="pill" href="#trust"><span class="hero-dot" aria-hidden="true"></span><span>Phala TEE verified</span><span class="muted">Operated from Texas</span></a>
         <div class="hero-emblem" aria-hidden="true">
-          <img src="assets/brand/logo-mark.svg" alt="" width="112" height="112" fetchpriority="high">
+          <picture>
+            <source type="image/webp" srcset="assets/brand/logo-mark-128.webp 1x, assets/brand/logo-mark-256.webp 2x">
+            <img src="assets/brand/logo-mark-128.png" srcset="assets/brand/logo-mark-128.png 1x, assets/brand/logo-mark-256.png 2x" alt="" width="96" height="96" fetchpriority="high">
+          </picture>
         </div>
         <h1 id="hero-h">AI inference peer in Texas</h1>
         <p class="hero__lead">Pay per request in USDC on the AntSeed network. Verified domain, Phala TEE attestation, and 13 live models starting at $0.</p>
@@ -551,7 +559,10 @@ export OPENAI_API_KEY="antseed"</code></pre>
         </div>
         <div class="span-6 start-7">
           <div class="panel faq-visual" data-visual>
-            <img class="faq-visual__mark" src="assets/brand/logo-mark.svg" alt="attacompute Texan ant emblem wearing a cowboy hat and turquoise Texas star bolo tie" width="156" height="156" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/brand/logo-mark-256.webp 1x, assets/brand/logo-mark-512.webp 2x">
+              <img class="faq-visual__mark" src="assets/brand/logo-mark-256.png" srcset="assets/brand/logo-mark-256.png 1x, assets/brand/logo-mark-512.png 2x" alt="attacompute rust ant emblem" width="156" height="156" loading="lazy">
+            </picture>
             <svg class="faq-visual__svg" viewBox="0 0 420 132" role="img" aria-label="Verification summary for attacompute Texas peer">
               <rect x="1" y="1" width="418" height="130" rx="12" fill="#f5f0e6" stroke="#1f1916" stroke-opacity="0.14"/>
               <text x="20" y="30" fill="#1f1916" font-family="Funnel Sans, system-ui, sans-serif" font-size="14" font-weight="500">Independent Texas operator</text>
@@ -585,7 +596,7 @@ export OPENAI_API_KEY="antseed"</code></pre>
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
-          <a class="nav__logo" href="#top"><img class="nav__logo-img" src="assets/brand/logo-mark.svg" alt="" width="32" height="32" loading="lazy">attacompute</a>
+          <a class="nav__logo" href="#top"><picture><source type="image/webp" srcset="assets/brand/logo-mark-64.webp 1x, assets/brand/logo-mark-128.webp 2x"><img class="nav__logo-img" src="assets/brand/logo-mark-64.png" srcset="assets/brand/logo-mark-64.png 1x, assets/brand/logo-mark-128.png 2x" alt="" width="32" height="32" loading="lazy"></picture>attacompute</a>
           <p class="footer__lede">Independent AI inference provider on AntSeed, operated from Texas. Independent operator. Not affiliated with the AntSeed Foundation.</p>
         </div>
         <div class="span-2 footer__col">
