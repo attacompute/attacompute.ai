@@ -19,21 +19,32 @@ Branch: `redesign/texan-site`
 
 ## 2. Architecture, Continuity & Live Data Pipeline
 
-- **Static Cloudflare Pages output** with zero build server or runtime secrets.
+- **Static Cloudflare Pages output + Pages Function (`/api/models`)** with zero build server or runtime secrets.
 - **Route & Header Continuity with Live Site (`_headers`, `_redirects`, `404.html`, `robots.txt`, `sitemap.xml`)**:
-  - `_headers` scopes `Strict-Transport-Security: max-age=15552000` (no `includeSubDomains`) to `https://attacompute.ai/*` and `https://d5v1n2.com/*`, adds `X-Robots-Tag: noindex` for `https://d5v1n2.pages.dev/*` and `https://:version.d5v1n2.pages.dev/*`, and allows Cloudflare Web Analytics (`https://static.cloudflareinsights.com` in `script-src`, `https://cloudflareinsights.com` in `connect-src`).
+  - `_headers` scopes `Strict-Transport-Security: max-age=15552000` (no `includeSubDomains`) to `https://attacompute.ai/*` and `https://d5v1n2.com/*`, adds `X-Robots-Tag: noindex` for `https://d5v1n2.pages.dev/*` and `https://:version.d5v1n2.pages.dev/*`, allows Cloudflare Web Analytics (`https://static.cloudflareinsights.com` in `script-src`, `https://cloudflareinsights.com` in `connect-src`), and covers `/api/models` and `/data/models-snapshot.json` via `connect-src 'self'`.
   - `_redirects` maps legacy paths (`/about`, `/about/` → `/#trust`; `/contact`, `/contact/` → `/#contact`; `/models`, `/models/` → `/#models`) via 301 redirects.
   - Subpages live at `/connect/` (`connect/index.html`), `/privacy/` (`privacy/index.html`), and `/terms/` (`terms/index.html`) so Cloudflare Pages' automatic `.html` handling never loops.
   - Includes an on-brand `404.html` (with the original ant emblem and links to `/` and `/connect/`), `robots.txt`, and `sitemap.xml`.
   - Contact block (`#contact` in the home footer, plus footer links on every page) lists `dev@attacompute.ai` (`mailto:`) and `@AttaCompute` on X (`https://x.com/AttaCompute`) with guidance to include the model, approximate time, and request ID if available and to keep keys and wallet secrets out of public posts.
   - Copy accurately describes attacompute as operated from Texas while its Phala TEE peer runs on Phala Cloud (`"AI inference, operated from Texas"`).
+- **Live Seller Metadata Proxy (`functions/api/models.js`, `functions/_lib/models.js`)**:
+  - Serves `GET /api/models` as a Cloudflare Pages Function so HTTPS visitors on `attacompute.ai` pull live models, per-token prices, and per-model health directly from attacompute's own seller metadata endpoint (`http://66.220.6.105:14324/metadata` with `x-antseed-metadata-version: 18`) without mixed-content or CSP issues.
+  - Uses a 5-second upstream timeout and `cloudflare:sockets` raw TCP HTTP/1.1 transport for raw-IP / custom-port origins (since Cloudflare Workers' standard `fetch()` restricts direct IP / non-standard port origins in production), with automatic `fetch()` support for standard HTTPS/HTTP hostnames or local dev. Optional Cloudflare Pages environment variables `SELLER_METADATA_URL` and `SELLER_METADATA_VERSION` allow overriding the upstream target (for example, to an HTTPS hostname or Cloudflare Tunnel) without a code change.
+  - Pure mapping module `functions/_lib/models.js` (underscored so Cloudflare Pages excludes it from public route generation) maps upstream providers into minimal public JSON (`{ updatedAt, models: [{ model, input, cachedInput, output, free, health }] }`) and strips signatures, channel counts, IPs, peer IDs, capabilities, and performance internals.
+  - Caches `200 OK` responses at the Cloudflare edge via the Cache API (`caches.default`, canonicalized without query params) and `cf: { cacheTtl: 60, cacheEverything: true }` with `Cache-Control: public, max-age=60, stale-while-revalidate=300`, plus explicit security headers (`X-Content-Type-Options: nosniff`, `Cross-Origin-Resource-Policy: same-origin`, `Referrer-Policy`, `X-Robots-Tag: noindex`, because `_headers` only applies to static assets and not Pages Functions).
+  - Returns `502 Bad Gateway` JSON with `Cache-Control: no-store` on any upstream failure, timeout, or empty provider list (without leaking upstream IPs or error details) so the client falls back seamlessly.
+- **Live Models Table & Honest Fallback Chain (`assets/site/app.js`, `data/models-snapshot.json`)**:
+  - Fetches `/api/models` first for `#models` and `[data-stat="model-count"]`; falls back to `localStorage` (`attacompute_models_v1`), then to the build-time seller-metadata snapshot `data/models-snapshot.json` (with `data/snapshot.json` and static HTML rows as final fallbacks so CLS stays ~0).
+  - Tracks models and stats status labels independently (`[data-models-updated-label]` vs `[data-stats-updated-label]`) so `"Live"`, `"Cached"`, and `"Snapshot"` indicators remain honest if either upstream is offline.
+  - Merges existing display names, modality, and price-matched savings from `data/models-snapshot.json` / AntSeedStats metadata only where they already exist; never invents prices and suppresses stale savings percentages if a live price changed.
+  - Displays semantic per-model health status (`Healthy`, `Degraded`, `Offline`) with both shape and text indicators (never color alone) and `@media (forced-colors: active)` support.
 - **Live AntSeedStats integration (`assets/site/app.js`, `assets/site/chart.js`)**:
-  - Fetches `https://antseedstats.com/api/v1` for both the active Phala TEE seller (`0x6c8044f5e6fb2ad70dd31fd7a20fae05a73fa139`) and the original seller (`0xd5e7d5950b6cc71c095da4ace0c0cb8495667be0`), plus live model pricing and daily volume series.
-  - Caches API payloads in `localStorage` with a 5-minute TTL and automatic background refresh; falls back immediately to `data/snapshot.json` (generated by `scripts/snapshot.mjs`) if the API is unreachable.
+  - Fetches `https://antseedstats.com/api/v1` for on-chain settlement telemetry and daily volume series across both the active Phala TEE seller (`0x6c8044f5e6fb2ad70dd31fd7a20fae05a73fa139`) and the original seller (`0xd5e7d5950b6cc71c095da4ace0c0cb8495667be0`).
+  - Caches stats payloads in `localStorage` (`attacompute_antseedstats_v1`) with a 5-minute refresh; falls back immediately to `data/snapshot.json` (generated by `scripts/snapshot.mjs`) if the API is unreachable.
   - Stitches daily settled gross USDC across both sellers (May 9, 2026 through present) into a clean inline SVG bar chart (`#stats`) with an explicit **Nov 18, 2026** TEE switchover marker and keyboard/pointer bar inspection.
   - Displays gross on-chain settled USDC clearly labeled as gross before protocol fees, never net profit, alongside an explicit CC BY 4.0 attribution link to AntSeedStats.
 - **Interactive Models & Pricing Table (`#models`)**:
-  - Live searchable, filterable (`All`, `Text`, `Image`, `Video`, `Free`), and sortable per-token pricing table with one-click copy of `<peerId>@<advertised_as>` pinned model IDs.
+  - Live searchable, filterable (`All`, `Text`, `Free`, plus `Image`/`Video` automatically when advertised), and sortable per-token pricing table with one-click copy of `<peerId>@<advertised_as>` pinned model IDs.
   - Progressive compact view (6 rows on desktop, 4 on mobile) with a one-click toggle to show all advertised models.
 - **OS-Detecting AntSeed Desktop Download & Connection Docs (`#download`, `#connect`, `/connect/`)**:
   - Detects macOS Apple silicon vs Intel, Windows x64, and Linux x64/arm64 (via `navigator.userAgentData` + WebGL renderer/UA fallback) to highlight the matching direct `download.antseed.com/vpr/<platform>` installer.
@@ -94,6 +105,16 @@ Verified visually and compressed in headless Chrome (`scripts/capture-screenshot
 ## 6. Operational Notes
 
 - **Base64 noise tile (`--g-noise-soft`)**: `assets/site/site.css` overrides `--g-noise-soft` with a base64-encoded equivalent of the SVG noise filter from `assets/backgrounds/backgrounds.css`, eliminating the stray `/%23n` sub-request without modifying any kit file (`perf.mjs` reports `0 broken requests`).
-- **Dynamic modality tabs**: `assets/site/app.js` renders modality filter buttons for modalities with > 0 advertised models (currently `All (13)`, `Text (13)`, `Free (1)`), and automatically adds `Image` or `Video` chips whenever the seller advertises those modalities live.
+- **Dynamic modality tabs**: `assets/site/app.js` renders modality filter buttons for modalities with > 0 advertised models (currently `All (14)`, `Text (14)`, `Free (1)`), and automatically adds `Image` or `Video` chips whenever the seller advertises those modalities live.
 - **CSP hash maintenance**: `_headers` pins the exact SHA-256 hashes of the two small inline `<script>` tags in `index.html`. If either inline `<script>` changes, recompute its SHA-256 hash and update `_headers`.
-- **Snapshot refresh**: Run `node scripts/snapshot.mjs` anytime to refresh `data/snapshot.json` before deployment. `snapshot.mjs` explicitly strips internal/upstream fields (`list_source`, etc.) so only public AntSeedStats data is written.
+- **Snapshot refresh**: Run `node scripts/snapshot.mjs` (or `node scripts/snapshot.mjs --models-only`) anytime to refresh `data/models-snapshot.json` and `data/snapshot.json` from live seller metadata + AntSeedStats. `snapshot.mjs` explicitly strips internal/upstream fields (`list_source`, `signature`, IPs, channel counts, etc.) so only minimal public display data is written.
+- **Unit tests**: Run `node --test test/models.test.mjs` to verify seller-metadata → public-JSON mapping, field stripping, free-tier detection, display-metadata merging, raw HTTP/1.1 parsing, edge caching, and `502` error handling.
+
+## 7. Deployment (Cloudflare Pages + Pages Functions)
+
+- **Project setup (`README.md` / `_headers`)**: This repository is documented as a **git-connected Cloudflare Pages project** (`d5v1n2.pages.dev` / `attacompute.ai`, Framework preset `None`, empty build command, build output directory `/`).
+- **Deploying Pages Functions**: Cloudflare Pages automatically discovers and compiles `functions/api/models.js` (ignoring `functions/_lib/models.js` because of its leading underscore) and deploys `/api/models` together with the static site on the next Cloudflare Pages deploy — i.e., **merging and pushing to `main`** on a git-connected Pages project (PR branches also get automatic preview deployments of the Function). If deploying manually via CLI instead of git-push, `npx wrangler pages deploy . --project-name d5v1n2` also bundles `functions/` from the repository root automatically.
+- **Optional environment variables**: In Cloudflare Dashboard → **Workers & Pages → Settings → Variables and Secrets**, you may optionally set `SELLER_METADATA_URL` (defaults to `http://66.220.6.105:14324/metadata`) and `SELLER_METADATA_VERSION` (defaults to `18`) if you later put a hostname or Cloudflare Tunnel in front of the seller metadata service.
+- **Post-deploy verification**:
+  1. `curl -i https://attacompute.ai/api/models` — expect `200 OK`, `Cache-Control: public, max-age=60, stale-while-revalidate=300`, and minimal `{ updatedAt, models }` JSON with no signatures, IPs, or channel counts.
+  2. Visit `https://attacompute.ai/#models` (or `/models`, which 301-redirects to `/#models`) and confirm the table displays live models with `"Live · Updated …"` status and `"Source: Live seller metadata"`.

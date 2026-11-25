@@ -9,7 +9,8 @@ Public website for **attacompute** — an independent AI inference provider (sel
 - Static HTML, CSS, and vanilla ES modules deployable directly to **Cloudflare Pages** with zero build server required.
 - Raster logo suite derived from the original rust ant head mark (`assets/brand/logo-mark-{64,128,256,512}.{png,webp}`, `favicon.ico`, PNG favicons at 16/32/48, `apple-touch-icon.png` at 180, `icon-512.png`, `assets/profile.png` at 512×512 for legacy social previews, and 1200×630 `og-image.png`).
 - Self-hosted fonts (`Funnel Display`, `Funnel Sans`, `DM Mono`) in `assets/fonts/` — no third-party font CDNs.
-- Live on-chain telemetry and advertised model pricing from the public [AntSeedStats API](https://antseedstats.com/developers) (CC BY 4.0), with `localStorage` caching, 5-minute background refresh, and a build-time fallback snapshot (`data/snapshot.json`).
+- Live model list, per-token pricing, and health pulled directly from attacompute's seller metadata via a **Cloudflare Pages Function** (`functions/api/models.js` → `GET /api/models`) with edge caching, `localStorage` caching (`attacompute_models_v1`), and a build-time seller-metadata fallback (`data/models-snapshot.json`).
+- Live on-chain settlement telemetry and daily USDC chart from the public [AntSeedStats API](https://antseedstats.com/developers) (CC BY 4.0), with `localStorage` caching (`attacompute_antseedstats_v1`), 5-minute background refresh, and a build-time fallback snapshot (`data/snapshot.json`).
 - Dedicated pages & routing:
   - `/` (`index.html`) — Hero, live stitched stats & daily USDC chart, searchable/sortable models & pricing table, OS-aware AntSeed Desktop download, Desktop/CLI connect guide, trust & Phala TEE verification, FAQ, and contact/footer (`#contact`).
   - `/connect/` (`connect/index.html`) — Complete Desktop, direct Buyer CLI (`:8377`), Gateway CLI (`:8379`), and OpenAI SDK connection guide with copy-to-clipboard commands.
@@ -30,12 +31,20 @@ python3 -m http.server 8080
 
 Then visit `http://localhost:3000` (or `http://localhost:8080`).
 
-## Refreshing the fallback snapshot
+## Refreshing fallback snapshots & running tests
 
-The site fetches live data client-side from `https://antseedstats.com/api/v1` and falls back to `data/snapshot.json` if the API is unreachable. To refresh the committed snapshot from the public AntSeedStats API:
+The site fetches live models from `/api/models` (falling back to `localStorage`, then `data/models-snapshot.json`) and live on-chain settlement stats from `https://antseedstats.com/api/v1` (falling back to `localStorage`, then `data/snapshot.json`). To refresh the committed snapshots from live seller metadata and AntSeedStats:
 
 ```bash
 node scripts/snapshot.mjs
+# Or refresh only the seller-metadata model snapshots:
+node scripts/snapshot.mjs --models-only
+```
+
+To run the unit tests for the metadata mapping, HTTP parser, and Pages Function handler:
+
+```bash
+node --test test/models.test.mjs
 ```
 
 To regenerate the transparent marks, favicons, app icons, and OG image from the original raster logo PNG (requires local Google Chrome for `og-image.png`):
@@ -59,6 +68,6 @@ This site requires **no build step**:
 1. Connect the repository in **Cloudflare Dashboard → Workers & Pages → Create → Pages**.
 2. Set **Framework preset** to `None`.
 3. Leave **Build command** empty and set **Build output directory** to `/` (root).
-4. Cloudflare Pages automatically applies `_headers` for CSP, security headers, and static asset caching.
+4. Cloudflare Pages automatically compiles `functions/api/models.js` (deploying `/api/models` alongside the site) and applies `_headers` to static assets for CSP, security headers, and caching.
 
 (Optional) Add a scheduled CI job or run `node scripts/snapshot.mjs` periodically to keep `data/snapshot.json` fresh.
