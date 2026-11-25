@@ -97,7 +97,7 @@
           <p class="os-detected-note" id="download-detected-note">AntSeed Desktop runs a local gateway at <code>http://127.0.0.1:8379/v1</code> and manages your wallet and connected tools.</p>
           <ol class="connect-steps">
             <li><span>Download and open AntSeed Desktop for macOS, Windows, or Linux.</span></li>
-            <li><span>Open your balance in the top bar and add USDC on Base (or use card checkout where supported). Free models such as <code>minimax-m2.7</code> work with $0 balance.</span></li>
+            <li><span>Open your balance in the top bar and add USDC on Base (or use card checkout where supported). Free models such as <code>minimax-m3.1-flash</code> work with $0 balance.</span></li>
             <li><span>Switch the prompt bar to <strong>Private</strong> to require Phala TEE attestation, then select <strong>attacompute</strong> (<code>6c8044f5…fa139</code>) as your peer.</span></li>
             <li><span>Pick any advertised model and start chatting, or open <strong>Agents &amp; apps</strong> to wire up coding tools automatically.</span></li>
           </ol>
@@ -211,7 +211,7 @@ curl http://localhost:8379/v1/chat/completions \
   -H "Authorization: Bearer $ANTSEED_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "6c8044f5e6fb2ad70dd31fd7a20fae05a73fa139@minimax-m2.7",
+    "model": "6c8044f5e6fb2ad70dd31fd7a20fae05a73fa139@minimax-m3.1-flash",
     "messages": [
       {"role": "user", "content": "Hello"}
     ]

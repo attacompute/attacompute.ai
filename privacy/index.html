@@ -64,7 +64,7 @@
 
       <h2>This website</h2>
       <p>This static website is hosted on Cloudflare Pages and uses Cloudflare Web Analytics for cookieless visitor and performance analytics. It sets no tracking cookies and loads no third-party font CDNs or ad trackers.</p>
-      <p>To display live telemetry and model prices, your browser fetches public seller statistics directly from <code>antseedstats.com</code> and caches the latest public JSON response in <code>localStorage</code> (<code>attacompute_antseedstats_v1</code>) so stats load immediately even if the API is temporarily unreachable.</p>
+      <p>To display live models and per-token prices, your browser fetches <code>/api/models</code> on this site (a Cloudflare Pages Function that proxies public seller metadata and caches the minimal public JSON at the edge) and caches the latest response in <code>localStorage</code> (<code>attacompute_models_v1</code>). To display on-chain settlement statistics and daily charts, your browser fetches public telemetry from <code>antseedstats.com</code> and caches it in <code>localStorage</code> (<code>attacompute_antseedstats_v1</code>) so data loads reliably even if an upstream endpoint is temporarily unreachable.</p>
 
       <h2>Independent operator</h2>
       <p>attacompute is an independent inference provider operated from Texas and is not affiliated with the AntSeed Foundation.</p>

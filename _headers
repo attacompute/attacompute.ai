@@ -35,3 +35,6 @@ https://:version.d5v1n2.pages.dev/*
 
 /data/snapshot.json
   Cache-Control: public, max-age=300, stale-while-revalidate=600
+
+/data/models-snapshot.json
+  Cache-Control: public, max-age=300, stale-while-revalidate=600
